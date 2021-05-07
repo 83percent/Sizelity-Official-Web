@@ -1,0 +1,78 @@
+section#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+section#login > .logo {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+}
+section#login > .logo > h1 {
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+section#login > .logo > p {
+    padding-left: 0.5rem;
+    color: #00966B;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+section#login > #inputFrame {
+    padding: 1.5rem 2rem;
+    border: 1px solid #e3e8ee;
+    background-color: #f6f8fa;
+    border-radius: 8px;
+}
+section#login > #inputFrame > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+section#login > #inputFrame > div > h3 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+}
+section#login > #inputFrame > div > div {
+    border: 1px solid #88888850;
+    border-radius: 6px;
+    background: #ffffff;
+}
+section#login > #inputFrame > div > div > input {
+    all: unset;
+    width: 15rem;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.7rem;
+    border: none;
+}
+section#login > #inputFrame > button {
+    all: unset;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 0.3rem;
+    padding: 0.5rem 0;
+    background: #00966B;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+section#login > ul {
+    padding-top: 1.5rem;
+    text-align: center;
+}
+section#login > ul > li {
+    font-weight: 400;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+section#login > ul > li:hover {
+    text-decoration: underline;
+}
