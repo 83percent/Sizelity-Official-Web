@@ -1,0 +1,93 @@
+#main {
+    display: flex;
+    height: 100%;
+}
+/*      aside = Menu    */
+#main > aside {
+    width: 23rem;
+    border-right: 1px solid #e3e8ee;
+}
+#main > aside > header {
+    padding-bottom: 5rem;   
+}
+#main > aside > header > div {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+}
+#main > aside > header > div > h1 {
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+#main > aside > header > div > p {  
+    padding-left: 0.5rem;
+    color: #00966B;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+#main > aside > article {
+
+}
+#main > aside > article > a {
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+}
+#main > aside > article > a > div {
+    width: 0.5rem;
+    height: 3rem;
+    margin-right: 1.5rem;
+}
+#main > aside > article > a > i {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-right: 0.8rem;
+}
+
+#main > aside > article > a.active {
+    opacity: 1.0;
+}
+#main > aside > article > a.active > i {
+    color: #00966B;
+}
+#main > aside > article > a.active > p {
+    color: #00966B;
+}
+#main > aside > article > a.active > div {
+    background: #00966B;
+}
+/*      //aside = Menu    */
+
+
+/*      Router Article      */
+/*          Home            */
+#main > #home {
+    display: flex;
+    background-color: #f7f9fc;
+}
+#main > #home > #side-tap {
+    width: 26rem;
+    padding: 0 2rem;
+    border-right: 1px solid #e3e8ee;
+}
+#main > #home > #side-tap > h1 {
+    margin-top: 1.7rem;
+    font-size: 1.8rem;
+}
+#main > #home > #side-tap > .card-wrapper {
+
+}
+#main > #home > #side-tap > .card-wrapper > div {
+    margin-top: 1.8rem;
+}
+#main > #home > #side-tap > .card-wrapper > div > h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+#main > #home > #side-tap > .card-wrapper > div > .card {
+    border-radius: 8px;
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 0%);
+}

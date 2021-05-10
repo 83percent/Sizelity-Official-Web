@@ -1,20 +1,20 @@
-section#login {
+section#CreateAccount {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
 }
-section#login > .logo {
+section#CreateAccount > .logo {
     display: flex;
     align-items: flex-end;
     padding-top: 3rem;
     margin-bottom: 1rem;
 }
-section#login > .logo > h1 {
+section#CreateAccount > .logo > h1 {
     font-size: 2.0rem;
     font-weight: 600;
 }
-section#login > .logo > p {
+section#CreateAccount > .logo > p {
     padding-left: 0.5rem;
     color: #00966B;
     font-weight: 600;
@@ -61,18 +61,4 @@ section#login > #inputFrame > button {
     color: #ffffff;
     border-radius: 6px;
     cursor: pointer;
-}
-section#login > ul {
-    padding-top: 1.5rem;
-    text-align: center;
-}
-section#login > ul > li {
-    font-weight: 400;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-bottom: 2px;
-    cursor: pointer;
-}
-section#login > ul > li:hover {
-    text-decoration: underline;
 }
