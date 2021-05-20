@@ -16,7 +16,7 @@ import './App.css';
 // Context
 export const ServerContext = createContext(null);
 export const UserContext = createContext(null);
-const __server = 'http://localhost:3001';
+const __server = 'http://localhost:3002';
 
 
 function App() {

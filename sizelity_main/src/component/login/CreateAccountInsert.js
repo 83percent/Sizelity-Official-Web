@@ -14,6 +14,7 @@ const CreateAccountInsert = ({setStage, testing, id}) => {
         sname: "",
         domain : "",
         password: "",
+        cen: "",
         tel: "",
         email: ""
     }); 
@@ -55,7 +56,7 @@ const CreateAccountInsert = ({setStage, testing, id}) => {
     }
     const event = {
         signup : function() {
-            const {sname, domain, password, tel, email} = data.current;
+            const {sname, domain, password, ceo, tel, email} = data.current;
             if(sname.length < 2 || sname.length > 20) {
                 this.setCaution("2~20자의 쇼핑몰 명을 입력해주세요 ")
                 return;
@@ -87,6 +88,10 @@ const CreateAccountInsert = ({setStage, testing, id}) => {
             }
             if(password !== repassword.current) {
                 this.setCaution("비밀번호가 서로 일치하지 않습니다.");
+                return;
+            }
+            if(ceo.length < 2 || ceo.length > 20) {
+                this.setCaution("대표자명을 확인해주세요.");
                 return;
             }
             if(tel.length < 8) {
@@ -137,6 +142,12 @@ const CreateAccountInsert = ({setStage, testing, id}) => {
                     </div>
                     <div>
                         <input type="password" maxLength="30" onChange={(e) => {repassword.current = e.target.value}}/>
+                    </div>
+                </div>
+                <div>
+                    <h3>대표자 명</h3>
+                    <div>
+                        <input type="text" maxLength="20" onChange={(e) => {data.current.ceo = e.target.value}}/>
                     </div>
                 </div>
                 <div>

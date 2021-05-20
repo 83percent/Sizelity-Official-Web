@@ -14,13 +14,32 @@ const ShopUserModel = new Mongoose.Schema({
         type: String,
         require: true
     },
-    tel : {
-        type: String,
-        require: true
+    info : {
+        ceo : {
+            type: String,
+            require: true
+        },
+        tel : {
+            type: String,
+            require: true
+        },
+        email : {
+            type: String,
+            require: true
+        },
+        address : {
+            type: String
+        }
     },
-    email : {
-        type: String,
-        require: true
+    product : {
+        length : {
+            type: Number,
+            default: 0
+        },
+        request : {
+            type: Number,
+            default: 0
+        }
     },
     reg_date : {
         type: Date,

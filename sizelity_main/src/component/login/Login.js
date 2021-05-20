@@ -22,6 +22,7 @@ const Login = ({history, match}) => {
             method: 'POST',
             url: `${server}/account/signin`,
             data : {username: id, password},
+            withCredentials: true,
             timeout: 3500
         }).catch(err => {
             switch(err?.response?.status) {

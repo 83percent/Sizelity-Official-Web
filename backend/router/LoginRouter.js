@@ -10,9 +10,9 @@ const StatusCode = require("../lib/response-code/status-code");
 const saltRounds = 10;
 
 router.post('/signup', async (req, res) => {
-    const {sname, domain, password, tel, email} = req.body;
+    const {sname, domain, ceo, password, tel, email} = req.body;
     if(!sname || sname.length < 2 || sname.length > 20 || !domain ||
-        !password || password.length < 8 || password.length > 20 ||
+        !password || password.length < 8 || password.length > 20 || !ceo || ceo.length < 2 || ceo.length > 20 ||
         !tel || tel.length < 8 || tel.length > 20 || !email ||
         email.length < 10 || email.length > 50) res.sendStatus(StatusCode.invalid); // 412
     else {
@@ -22,7 +22,10 @@ router.post('/signup', async (req, res) => {
             else {
                 const salt = bcrypt.genSaltSync(saltRounds);
                 const hash = bcrypt.hashSync(password, salt);
-                const account = new ShopUserModel({sname, domain, password: hash, tel, email});
+                const account = new ShopUserModel({sname, domain, password: hash, 
+                    "info.ceo" : ceo, 
+                    "info.tel" : tel, 
+                    "info.email" : email});
                 const {_id} = await account.save();
                 res.send({_id}); // 200
             }
@@ -32,7 +35,7 @@ router.post('/signup', async (req, res) => {
         }
     }
 })
-router.post('/signin', passport.authenticate('local'), 
+router.post('/signin', passport.authenticate('local'),
     function(req, res) {
         if(req.user) {
             res.send({
@@ -46,16 +49,30 @@ router.post('/signin', passport.authenticate('local'),
 );
 
 passport.use(new LocalStrategy (
-    async function(username, password, done) {
-        const shop = await ShopUserModel.findById(username);
-        if(!shop) {
+    function(username, password, done) {
+        ShopUserModel.findById(username, (err, user) => {
+            if(err) return done(err);
+            if(!user) return done(null, false, {message: 'Incorrect id'});
+            try {
+                const match = password.length > 20 
+                    ? password === user.upwd
+                    : bcrypt.compareSync(password, user.password);
+                if(match) {
+                   return done(null, user);
+                } else {
+                   return done(null, false, {message: 'Incorrect password'});
+                }
+            } catch(e) {
+               return done(e);
+            }
+        });
+        /* if(!shop) {
             return done(null, false, {message: 'Incorrect id'});
         } else {
             try {
                 const match = password.length > 20 
                     ? password === shop.password
                     : bcrypt.compareSync(password, shop.password);
-                    console.log("비밀번호 확인 : ", match)
                 if(match) {
                     return done(null, shop);
                 } else {
@@ -64,7 +81,7 @@ passport.use(new LocalStrategy (
             } catch(e) {
                 return done(e)
             }
-        }
+        } */
     }
 ));
 passport.serializeUser((user, done) => {
