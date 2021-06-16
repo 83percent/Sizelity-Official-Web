@@ -23,7 +23,7 @@ const Main = () => {
     return (
         <article id="home">
             <div id="side-tap" className="en">
-                <h1>Overview</h1>
+                <h1 className="ko">대시보드</h1>
                 <div className="card-wrapper">
                     <div className="profile-wrapper">
                         <h2>Profile</h2>

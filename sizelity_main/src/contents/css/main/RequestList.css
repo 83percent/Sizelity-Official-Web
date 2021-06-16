@@ -1,0 +1,215 @@
+article#request > #request_list {
+    overflow-y: auto;
+    overflow-x: unset;
+}
+article#request > #request_list > div#title {
+    padding: 1.4rem;
+}
+article#request > #request_list > div#title > h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+article#request > #request_list > div#title > p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #888888;
+}
+article#request > #request_list > ul {
+    
+}
+
+article#request > #request_list > ul > li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    overflow: hidden;
+    opacity: 0.35;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    cursor: pointer;
+    border-top: 1px solid #e3e8ee;
+}
+article#request > #request_list > ul > li:last-child {
+    border-bottom: 1px solid #e3e8ee;
+}   
+article#request > #request_list > ul > li > div {
+    border-radius: 50%;
+    background: #888888;
+    padding: 0.1rem;
+    margin-right: 0.5rem;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+}
+article#request > #request_list > ul > li > p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    overflow-x: hidden;
+}
+article#request > #request_list > ul > li.active {
+    opacity: 1.0;
+}
+article#request > #request_list > ul > li.active > div {
+    padding: 0.28rem;
+    background: #00966B;
+}
+article#request > #request_list > div#more {
+    text-align: center;
+}
+article#request > #request_list > div#more > button {
+    all: unset;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+article#request > #request_list > div#more > button > i {
+    color: #000000;
+    opacity: 0.3;
+    font-size: 1.5rem;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+}
+article#request > #request_list > div#more > button:hover > i {
+    opacity: 1.0;
+}
+
+/* 
+    Main Tap
+*/
+
+article#request > section.main-tap {
+    overflow-y: auto;
+    overflow-x: unset;
+    background: red;
+    padding: 0 2.5rem;
+}
+article#request > section.main-tap > header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2.0rem;
+    overflow: hidden;
+}
+article#request > section.main-tap > header > div.title {
+    overflow-x: hidden;
+    max-width: 60rem;
+}
+article#request > section.main-tap > header > div.title > h1 {
+    font-size: 1.5rem;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 400;
+}
+article#request > section.main-tap > header > div.title > p {
+    font-size: 0.85rem;
+    color: #888888;
+    font-weight: 300;
+}
+article#request > section.main-tap > header > div.func-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 98%;
+    padding-right: 1rem;
+}
+article#request > section.main-tap > header > div.func-btn > div {
+    width: 2.7rem;
+    height: 2.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 0.2rem;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+}
+article#request > section.main-tap > header > div.func-btn > div#delete:hover {
+    background: #ff000030;
+    color: #ff0000;
+}
+article#request > section.main-tap > header > div.func-btn > div#save:hover {
+    background: #00966B30;
+    color: #00966B;
+}
+article#request > section.main-tap > header > div.func-btn > div > i {
+    opacity: 0.5;
+    font-size: 1.6rem;
+    transition-property: font-size;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+}
+article#request > section.main-tap > header > div.func-btn > div:hover > i {
+    opacity: 1.0;
+    font-size: 2.0rem;
+}
+/*
+    Input product information
+*/
+article#request > section.main-tap > .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+article#request > section.main-tap > .input-wrapper > .info-input-frame {
+    
+}
+article#request > section.main-tap > .input-wrapper > .info-input-frame > div {
+    padding: 0.55rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #00000030;
+}
+article#request > section.main-tap > .input-wrapper > .info-input-frame > div > p {
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+article#request > section.main-tap > .input-wrapper > .info-input-frame > div > input {
+    all: unset;
+    font-size: 1.1rem;
+    width: 25rem;
+    cursor: auto;
+    padding: 0.5rem 0 0.1rem 0;
+}
+article#request > section.main-tap > .input-wrapper > .info-input-frame > p:first-of-type {
+    padding-top: 0.5rem;
+}
+article#request > section.main-tap > .input-wrapper > span {
+    display: flex;
+    align-items: center;
+    margin-top: 1.95rem;
+    margin-bottom: 0.5rem;
+}
+article#request > section.main-tap > .input-wrapper > span > span {
+    border-radius: 50%;
+    background: #00966B;
+    padding: 0.25rem;
+    margin-right: 0.6rem;
+}
+article#request > section.main-tap > .input-wrapper > span > h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+article#request > section.main-tap > .input-wrapper > select {
+    border-radius: 6px;
+    width: 27rem;
+    border: 1px solid #00000030;
+    padding: 0.55rem 1rem;
+    margin-bottom: 0.5rem;
+}
+article#request > section.main-tap > .input-wrapper > .info-input-frame > p {
+    font-size: 0.80rem;
+    font-weight: 400;
+    color: #888888;
+    padding-left: 0.4rem;
+}

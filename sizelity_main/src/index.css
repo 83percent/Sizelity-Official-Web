@@ -16,13 +16,14 @@ body {
 }
 #root {
   width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 .en {
   font-family: 'Montserrat';
 }
 .ko {
-  font-family: 'NotoSans';
+  font-family: 'NanumSquare';
   letter-spacing: 1px;
 }
 code {

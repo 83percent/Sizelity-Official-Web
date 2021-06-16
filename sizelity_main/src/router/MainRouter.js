@@ -1,11 +1,13 @@
 import { useContext, createContext, useRef } from "react";
-import { Switch, Route, NavLink } from "react-router-dom";
+import { Switch, Route, NavLink, Link } from "react-router-dom";
 import { UserContext } from "../App";
 
 // Component
 import HomeComp from '../component/main/Home';
 import ProfileComp from '../component/main/Profile';
 import AccountFatchComp from '../component/main/profile/Fatch';
+import RequestList from '../component/main/request/RequestList';
+
 
 // CSS
 import '../contents/css/main/MainRouter.css';
@@ -80,27 +82,31 @@ const MainRouter = () => {
             <section id="main">
                 <aside>
                     <header>
-                        <div className="en">
-                            <h1>Sizelity</h1>
-                            <p>for shop</p>
+                        <div>
+                            <i className="material-icons">local_offer</i>
                         </div>
                     </header>
                     
                     <article className="ko">
                         <NavLink exact to="/main">
-                            <div></div>
-                            <i className="material-icons">home</i>
-                            <p>메인</p>
+                            <div>
+                                <i className="material-icons">home</i>
+                            </div>
                         </NavLink>
                         <NavLink to="/main/account">
-                            <div></div>
-                            <i className="material-icons">person</i>
-                            <p>내 계정</p>
+                            <div>
+                                <i className="material-icons">person</i>
+                            </div>
                         </NavLink>
                         <NavLink to="/main/product">
-                            <div></div>
-                            <i className="material-icons">home</i>
-                            <p>상품</p>
+                            <div>
+                                <i className="material-icons">checkroom</i>
+                            </div>
+                        </NavLink>
+                        <NavLink to="/main/request">
+                            <div>
+                                <i className="material-icons">new_label</i>
+                            </div>
                         </NavLink>
                     </article>
                     <footer>
@@ -112,6 +118,7 @@ const MainRouter = () => {
                     <Route exact path="/main" component={HomeComp}/>
                     <Route exact path="/main/account" component={ProfileComp}/>
                     <Route exact path="/main/account/fatch" component={AccountFatchComp}/>
+                    <Route exact path="/main/request" component={RequestList}/>
                 </Switch>
                 <nav id="alert-wrapper" className="off" ref={cautionWrapper}>
                     <div id="alert-frame">
