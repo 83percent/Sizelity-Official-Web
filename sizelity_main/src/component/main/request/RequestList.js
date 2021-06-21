@@ -37,8 +37,8 @@ const RequestList = () => {
         <article className="leftList" id="request">
             <section className="side-tap" id="request_list">
                 <div className='ko' id="title">
-                    <h1>사이즈 요청</h1>
-                    <p>고객들이 사이즈 비교를 원했지만, 정보가 없었어요.</p>
+                    <h1>상품 정보 요청</h1>
+                    <p>고객들이 사이즈 비교를 원했지만, 상품 정보가 없었어요.</p>
                 </div>
                 <ul>
                     {
