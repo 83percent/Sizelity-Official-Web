@@ -64,14 +64,10 @@ server.use('/user', (req, res, next) => {
     }
 },UserRouter);
 
-/* server.use('/product', (req, res, next) => {
-    if(req.isAuthenticated()) {
-        if(req.params?.id && req.user?.id === req.params?.id) next();
-        else res.sendStatus(401);
-    } else {
-        res.sendStatus(401);
-    }
-}, ProductRouter) */
+server.use('/product', (req, res, next) => {
+    if(req.isAuthenticated()) next();
+    else res.sendStatus(401);
+}, ProductRouter);
 
 // Route Connect
 

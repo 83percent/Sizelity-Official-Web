@@ -8,8 +8,7 @@ import MainRouter from './router/MainRouter';
 
 // Font
 import './contents/fonts/Montserrat_use.css';
-import './contents/fonts/NotoSans.css';
-import './contents/fonts/NanumSquare.css';
+import './contents/fonts/AppleSDGothicNeo.css';
 
 // Css
 import './App.css';

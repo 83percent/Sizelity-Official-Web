@@ -7,7 +7,7 @@ import HomeComp from '../component/main/Home';
 import ProfileComp from '../component/main/Profile';
 import AccountFatchComp from '../component/main/profile/Fatch';
 import RequestList from '../component/main/request/RequestList';
-
+import ProductComp from '../component/product/Product';
 
 // CSS
 import '../contents/css/main/MainRouter.css';
@@ -118,6 +118,7 @@ const MainRouter = () => {
                     <Route exact path="/main" component={HomeComp}/>
                     <Route exact path="/main/account" component={ProfileComp}/>
                     <Route exact path="/main/account/fatch" component={AccountFatchComp}/>
+                    <Route path="/main/product" component={ProductComp}/>
                     <Route exact path="/main/request" component={RequestList}/>
                 </Switch>
                 <nav id="alert-wrapper" className="off" ref={cautionWrapper}>

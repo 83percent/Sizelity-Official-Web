@@ -87,7 +87,6 @@ article#request > #request_list > div#more > button:hover > i {
 article#request > section.main-tap {
     overflow-y: auto;
     overflow-x: unset;
-    background: red;
     padding: 0 2.5rem;
 }
 article#request > section.main-tap > header {

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-import ProductType from '../../../js/ProductType';
+import ProductType from '../../../contents/js/ProductType';
 
 const AddProduct = ({url}) => {
     const [type, setType] = useState("null");

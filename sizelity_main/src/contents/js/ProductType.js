@@ -8,6 +8,20 @@ const ptype = [
     {value : "shoes", name : "신발"}
 ];
 
+function get(type) {
+    switch(type) {
+        case'all' : return '모든 상품'
+        case 'set' : return '세트'
+        case 'outer' : return '아우터'
+        case 'top' : return '상의'
+        case 'onepiece' : return '원피스'
+        case 'bottom' : return '하의'
+        case 'skirt' : return '치마'
+        case 'shose' : return '신발'
+        default : return null;
+    }
+}
+
 const sizeName = ['XS','S','M','L','XL','직접입력'];
 
 
@@ -104,6 +118,6 @@ const getSizeRate = (name) => {
     }
 } */
 module.exports = {
-    ptype, sizeName, getSizeRate
+    ptype, sizeName, getSizeRate, get
     /* subtype : subtype */
 }
