@@ -91,7 +91,7 @@ article#product > .main-tap .search-frame > input {
 /*
     article
 */
-article#product > #search > article {
+article#product > .main-tap > article {
     padding: 0 2.0rem;
 }
 article#product > #search > article > h4 {
@@ -136,6 +136,7 @@ article#product > .main-tap > article.list-frame .element > div > div > p {
     margin-right: 3px;
 }
 article#product > .main-tap > article.list-frame > #more {
+    margin-top: 0.6rem;
     text-align: center;
 }
 article#product > .main-tap > article.list-frame > #more > button {

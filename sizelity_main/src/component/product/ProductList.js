@@ -17,19 +17,21 @@ const ProductList = ({match}) => {
     const alert = useContext(AlertToggle);
 
     // Reg
-    // Ref
-    const _searchValue = useRef("");
     const comeDataCount = useRef(0);
 
     // Field
     const {type} = match.params;
+    const _loaderMaxCount = 15;
+
     const event = {
         getInitList : async function(type) {
+            if(comeDataCount.current !== 0) comeDataCount.current = 0;
             if(!ProductType.get(type)) return null;
             this.getData(type, 0);
         }, // getInitList()
         getData : async function(type, count) {
             if(count < 0) return null;
+            if(!loader) setLoader(true);
 
             await axios({
                 method : 'GET',
@@ -43,12 +45,23 @@ const ProductList = ({match}) => {
                 if(count === 0) setProductDatas(response.data);
                 else if(response.data.length > 0)setProductDatas([...productDatas, ...response.data]);
             }).catch((err) => {
+                console.log(err);
                 switch(err.response?.status) {
+                    case 412 : {
+                        alert(true,'<p>잘못된 접근입니다.</p>','error');
+                        break;
+                    }
+                    case 500 :
                     default : {
-                        alert(true, "<p>문제가 </p>")
+                        alert(true, "<p>오류가 발생했습니다.</p>", 'error')
                     }
                 }
+            }).finally(() => {
+                setLoader(false);
             })
+        }, // getData()
+        getMoreData : async function(type, count) {
+            this.getData(type, count);
         }
     }
 
@@ -90,9 +103,15 @@ const ProductList = ({match}) => {
                         </div>
                     ) : null    
                 }
+                {
+                    !loader && comeDataCount.current !== 0 && comeDataCount.current%_loaderMaxCount === 0 ? (
+                        <div id="more">
+                            <button onClick={() => event.getMoreData(type, comeDataCount.current)}>검색 결과 더 보기</button>
+                        </div>
+                    ) : null
+                }
             </article>
         </section>
-        
     )
 }
 

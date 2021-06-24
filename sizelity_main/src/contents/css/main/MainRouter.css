@@ -146,6 +146,7 @@
 #main > article.leftList > section.main-tap, #main > article.leftList2 > section.main-tap {
     background: #ffffff;
     flex-grow: 1;
+    overflow-y: auto;
 }
 /*          Home            */
 #main > #home {
@@ -162,9 +163,6 @@
     font-weight: 500;
     color: #00966B;
     font-size: 1.8rem;
-}
-#main > #home > #side-tap > .card-wrapper {
-
 }
 #main > #home > #side-tap > .card-wrapper > div {
     margin-top: 1.8rem;
