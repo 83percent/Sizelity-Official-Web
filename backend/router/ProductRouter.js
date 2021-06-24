@@ -34,6 +34,13 @@ router.get("/search/:value/:count", async (req, res) => {
     ./product/get
 */
 
+router.get("/get/expires", async (req, res) => {
+    const domain = req.user.domain;
+    const result = await Product.getCheckProduct(domain);
+    if(result) res.send(result);
+    else res.sendStatus(StatusCode.noData);
+});
+
 router.get("/get/type/:type/:count", async (req, res) => {
     const domain = req.user.domain;
     const {type, count} = req.params;
@@ -41,10 +48,9 @@ router.get("/get/type/:type/:count", async (req, res) => {
     if(parseInt(count) < 0) {
         res.sendStatus(StatusCode.invalid);
     }
-    
-    const result = await Product.getOfType(domain, type, perseInt(count));
+
+    const result = await Product.getOfType(domain, type, parseInt(count));
     if(result) res.send(result);
     else res.sendStatus(StatusCode.error);
 });
-
 module.exports = router;

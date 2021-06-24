@@ -28,7 +28,13 @@ async function search(id, value, number) {
 */
 async function getOfType(domain, type, number) {
     try {
-        const Products = await ProductModel.find({'praw.domain' : domain, 'info.ptype' : type}).skip(number).limit(_getCount);
+        let Products = [];
+        if(type && type == 'all') {
+            Products = await ProductModel.find({'praw.domain' : domain}).skip(number).limit(_getCount);
+        } else {
+            Products = await ProductModel.find({'praw.domain' : domain, 'info.ptype' : type}).skip(number).limit(_getCount);
+        }
+        
         return Products;
     } catch(err) {
         console.log(err);
@@ -38,9 +44,21 @@ async function getOfType(domain, type, number) {
     /* console.log(`${domain}의 ${type} 상품 검색`);
     console.log(Products); */
 }  
-
+async function getCheckProduct(domain,number) {
+    if(number === undefined) number = 0;
+    try {
+        const date = new Date();
+        //date.setMonth(date.getMonth() - 3); // 3개월 전에 등록한 상품 목록을 보여줌
+        date.setMonth(date.getMonth() - 1); // 테스트용
+        const Products = await ProductModel.find({'praw.domain' : domain, reg_date : {$lte : date}}).skip(number).limit(_getCount);
+        return Products;
+    } catch(err) {
+        console.log(err);
+        return null;
+    }
+}
 module.exports = {
     set,
     search,
-    getOfType
+    getOfType, getCheckProduct
 }

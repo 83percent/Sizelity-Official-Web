@@ -4,6 +4,7 @@ import { NavLink, Route, Switch } from 'react-router-dom';
 import ProductSearch from './ProductSearch';
 import ProductAdd from './ProductAdd';
 import ProductList from './ProductList';
+import ProductExpires from './ProductExpires';
 
 
 // CSS
@@ -106,6 +107,7 @@ const Product = () => {
                     <Route exact path="/main/product" component={ProductSearch} />
                     <Route exact path="/main/product/add" component={ProductAdd} />
                     <Route path="/main/product/list/:type" component={ProductList} />
+                    <Route exact path="/main/product/expires" component={ProductExpires} />
                 </Switch>
         </article>
     )
