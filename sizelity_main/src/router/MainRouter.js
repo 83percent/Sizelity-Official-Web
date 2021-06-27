@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router";
 import Preview from '../component/main/Preview';
 
 // CSS
-import '../contents/css/account/Account.css';
+import '../contents/css/main/Account.css';
 
 const AccountRouter = () => {
     return (

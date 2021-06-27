@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 
+
+// Image
 //import MainImage from '../../contents/image/iPhone12_Clay_Shadow.png';
 import MainImage from '../../contents/image/phone.png';
-import '../../contents/css/account/Reserve.css';
+
+// CSS
+import '../../contents/css/main/Reserve.css';
 
 
 const Preview = () => {

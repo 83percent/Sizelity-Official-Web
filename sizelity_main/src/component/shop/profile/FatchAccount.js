@@ -1,5 +1,5 @@
 // CSS
-import '../../../contents/css/main/AccountFatch.css';
+import '../../../contents/css/shop/AccountFatch.css';
 
 const FatchAccount = ({data}) => {
     return (

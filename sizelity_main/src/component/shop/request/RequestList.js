@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import AddProduct from './AddProduct';
 
 // CSS
-import '../../../contents/css/main/RequestList.css';
+import '../../../contents/css/shop/RequestList.css';
 
 
 

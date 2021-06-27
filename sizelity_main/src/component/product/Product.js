@@ -8,7 +8,7 @@ import ProductExpires from './ProductExpires';
 
 
 // CSS
-import '../../contents/css/main/Product.css';
+import '../../contents/css/shop/Product.css';
 
 const Product = () => {
     

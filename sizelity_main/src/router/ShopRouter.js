@@ -10,12 +10,12 @@ import RequestList from '../component/shop/request/RequestList';
 import ProductComp from '../component/product/Product';
 
 // CSS
-import '../contents/css/main/MainRouter.css';
-import '../contents/css/main/Wrapper.css';
+import '../contents/css/shop/ShopRouter.css';
+import '../contents/css/shop/Wrapper.css';
 
 export const AlertToggle = createContext(null);
 
-const MainRouter = () => {
+const ShopRouter = () => {
     // Context
     const {user} = useContext(UserContext);
     //if(!user?._id || !user?.sname) 로그인 없이 접근 시 처리
@@ -134,4 +134,4 @@ const MainRouter = () => {
     )
 }
 
-export default MainRouter;
+export default ShopRouter;

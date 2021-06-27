@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
 // CSS
-import '../../contents/css/main/Profile.css';
+import '../../contents/css/shop/Profile.css';
 
 //Context
 import { ServerContext, UserContext } from '../../App';
