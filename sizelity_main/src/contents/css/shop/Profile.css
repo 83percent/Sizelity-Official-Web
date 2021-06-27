@@ -1,0 +1,41 @@
+#shop > .wrapper > article#profile {
+    
+}
+#shop > .wrapper > article#profile > .list-frame {
+    
+}
+#shop > .wrapper > article#profile > .list-frame > .title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #00000050;
+}
+#shop > .wrapper > article#profile > .list-frame > .title > h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+#shop > .wrapper > article#profile > .list-frame > .title > p {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    margin-left: 1rem;
+    opacity: 0.6;
+    cursor: pointer;
+}
+#shop > .wrapper > article#profile > .list-frame > ul {
+    padding: 1.5rem 0;
+}
+#shop > .wrapper > article#profile > .list-frame > ul > li {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+#shop > .wrapper > article#profile > .list-frame > ul > li > h4 {
+    width: 10rem;
+    font-weight: 400;
+    text-align: right;
+}
+#shop > .wrapper > article#profile > .list-frame > ul > li > p {
+    font-weight: 300;
+    margin-left: 1rem
+}

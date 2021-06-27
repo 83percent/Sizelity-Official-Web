@@ -1,10 +1,10 @@
-#main {
+#shop {
     display: flex;
     width: 100%;
     height: 100%;
 }
 /*      Alert       */
-#main > nav#alert-wrapper {
+#shop > nav#alert-wrapper {
     position: fixed;
     bottom: 0rem;
     right: 5rem;
@@ -19,10 +19,10 @@
     -moz-transition-timing-function: ease;
     -o-transition-timing-function: ease;
 }
-#main > nav#alert-wrapper.off {
+#shop > nav#alert-wrapper.off {
     bottom: -25rem;
 }
-#main > nav#alert-wrapper {
+#shop > nav#alert-wrapper {
     width: 27rem;
     height: 14rem;
     background: #f7f9fc;
@@ -35,10 +35,10 @@
     border-radius: 12px 12px 0 0;
     box-shadow: 0 -2px 4px rgb(0 0 0 / 10%), 0px 8px 16px rgb(0 0 0 / 0%);
 }
-#main > nav#alert-wrapper > #alert-frame > div {
+#shop > nav#alert-wrapper > #alert-frame > div {
     text-align: center;
 }
-#main > nav#alert-wrapper > #alert-frame > i {
+#shop > nav#alert-wrapper > #alert-frame > i {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
@@ -49,23 +49,23 @@
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
 }
-#main > nav#alert-wrapper > #alert-frame > i:hover {
+#shop > nav#alert-wrapper > #alert-frame > i:hover {
     opacity: 1.0;
 }
 /*      //Alert       */
 /*      aside = Menu    */
-#main > aside {
+#shop > aside {
     width: 4.3rem;
     min-width: 4.3rem;
     max-width: 4.3rem;
     border-right: 1px solid #e3e8ee;
 }
-#main > aside > header {
+#shop > aside > header {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
 }
-#main > aside > header > div {
+#shop > aside > header > div {
     background: #00966B;
     width: 2.5rem;
     height: 2.5rem;
@@ -74,24 +74,24 @@
     align-items: center;
     border-radius: 8px;
 }
-#main > aside > header > div > i {
+#shop > aside > header > div > i {
     font-size: 1.5rem;
     color: #ffffff;
 }
-#main > aside > article {
+#shop > aside > article {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 7rem;
 }
-#main > aside > article > a {
+#shop > aside > article > a {
     display: flex;
     align-items: center;
     opacity: 0.5;
     cursor: pointer;
     margin-bottom: 0.8rem;
 }
-#main > aside > article > a > div {
+#shop > aside > article > a > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,20 +100,20 @@
     border-radius: 6px;
     transition-duration: 0.3s;
 }
-#main > aside > article > a > div > i {
+#shop > aside > article > a > div > i {
     font-size: 1.5rem;
     color: #00000090;
     transition-duration: 0.3s;
 }
 
-#main > aside > article > a.active {
+#shop > aside > article > a.active {
     opacity: 1.0;
 }
-#main > aside > article > a.active > div > i {
+#shop > aside > article > a.active > div > i {
     font-size: 2.0rem;
     color: #00966B;
 }
-#main > aside > article > a.active > div {
+#shop > aside > article > a.active > div {
     background: #00966B30;
     width: 2.5rem;
     height: 2.5rem;
@@ -122,20 +122,20 @@
 
 
 /*      Router Article      */
-#main > article.leftList {
+#shop > article.leftList {
     display: flex;
     flex-grow: 1;
 }
-#main > article.leftList2 {
+#shop > article.leftList2 {
     display: flex;
     flex-grow: 1;
 }
-#main > article.leftList2 > section.side-tap {
+#shop > article.leftList2 > section.side-tap {
     background-color: #f7f9fc;
     border-right: 1px solid #e3e8ee;
     flex-shrink: 1;
 }
-#main > article.leftList > section.side-tap {
+#shop > article.leftList > section.side-tap {
     background-color: #f7f9fc;
     border-right: 1px solid #e3e8ee;
     flex-shrink: 1;
@@ -143,59 +143,59 @@
     min-width: 28rem;
     max-width: 28rem;
 }
-#main > article.leftList > section.main-tap, #main > article.leftList2 > section.main-tap {
+#shop > article.leftList > section.main-tap, #shop > article.leftList2 > section.main-tap {
     background: #ffffff;
     flex-grow: 1;
     overflow-y: auto;
 }
 /*          Home            */
-#main > #home {
+#shop > #home {
     display: flex;
     background-color: #f7f9fc;
 }
-#main > #home > #side-tap {
+#shop > #home > #side-tap {
     width: 26rem;
     padding: 0 2rem;
     border-right: 1px solid #e3e8ee;
 }
-#main > #home > #side-tap > h1 {
+#shop > #home > #side-tap > h1 {
     margin-top: 1.0rem;
     font-weight: 500;
     color: #00966B;
     font-size: 1.8rem;
 }
-#main > #home > #side-tap > .card-wrapper > div {
+#shop > #home > #side-tap > .card-wrapper > div {
     margin-top: 1.8rem;
 }
-#main > #home > #side-tap > .card-wrapper > div > div.card-inline {
+#shop > #home > #side-tap > .card-wrapper > div > div.card-inline {
     display: flex;
 }
-#main > #home > #side-tap > .card-wrapper > div > h2 {
+#shop > #home > #side-tap > .card-wrapper > div > h2 {
     font-size: 1.4rem;
     margin-bottom: 0.4rem;
 }
-#main > #home > #side-tap > .card-wrapper > div .card {
+#shop > #home > #side-tap > .card-wrapper > div .card {
     border-radius: 8px;
     padding: 1rem;
     background: #ffffff;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 0%);
 }
-#main > #home > #side-tap > .card-wrapper > div > div.card-inline > .card {
+#shop > #home > #side-tap > .card-wrapper > div > div.card-inline > .card {
     width: 100%;
 }
-#main > #home > #side-tap > .card-wrapper > div > div.card-inline > .card:nth-of-type(1) {
+#shop > #home > #side-tap > .card-wrapper > div > div.card-inline > .card:nth-of-type(1) {
     margin-right: 0.3rem;
 }
-#main > #home > #side-tap > .card-wrapper > div > div.card-inline > .card:nth-of-type(2) {
+#shop > #home > #side-tap > .card-wrapper > div > div.card-inline > .card:nth-of-type(2) {
     margin-left: 0.3rem;
 }
-#main > #home > #side-tap > .card-wrapper > div .card > .more {
+#shop > #home > #side-tap > .card-wrapper > div .card > .more {
     display: flex;
     justify-content: flex-end;
     text-align: right;
     letter-spacing: 1px;
 }
-#main > #home > #side-tap > .card-wrapper > div .card > .more > p {
+#shop > #home > #side-tap > .card-wrapper > div .card > .more > p {
     cursor: pointer;
     opacity: 0.4;
     font-size: 0.9rem;
@@ -205,36 +205,36 @@
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
 }
-#main > #home > #side-tap > .card-wrapper > div .card > .more > p:hover {
+#shop > #home > #side-tap > .card-wrapper > div .card > .more > p:hover {
     opacity: 1.0;
 }
-#main > #home > #side-tap > .card-wrapper > div .card > .info-frame {
+#shop > #home > #side-tap > .card-wrapper > div .card > .info-frame {
     display: flex;
     align-items: flex-end;
     padding: 0.3rem 0 0.5rem 0;
 }
-#main > #home > #side-tap > .card-wrapper > div .card > .info-frame > h3 {
+#shop > #home > #side-tap > .card-wrapper > div .card > .info-frame > h3 {
     font-size: 1.8rem;
 }
-#main > #home > #side-tap > .card-wrapper > div .card > .info-frame > p {
+#shop > #home > #side-tap > .card-wrapper > div .card > .info-frame > p {
     margin-left: 0.3rem;
 }
 /*      Profile Card        */
-#main > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card {
+#shop > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card {
     background: #00966B;
     color: #ffffff;
 }
-#main > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card > h1 {
+#shop > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card > h1 {
     font-size: 1.8rem;
     font-weight: 400;
 }
-#main > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card > .more {
+#shop > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card > .more {
     display: flex;
     justify-content: flex-end;
     text-align: right;
     letter-spacing: 1px;
 }
-#main > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card > .more > p {
+#shop > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card > .more > p {
     cursor: pointer;
     opacity: 0.6;
     font-size: 0.9rem;
@@ -244,7 +244,7 @@
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
 }
-#main > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card > .more > p:hover {
+#shop > #home > #side-tap > .card-wrapper > div.profile-wrapper > .card > .more > p:hover {
     opacity: 1.0;
 }
 
@@ -253,12 +253,12 @@
 
 
 /*      Empty       */
-#main > #home > #side-tap > .card-wrapper > div .emptyCard {
+#shop > #home > #side-tap > .card-wrapper > div .emptyCard {
     text-align: center;
     padding: 1rem;
     cursor: pointer;
 }
-#main > #home > #side-tap > .card-wrapper > div .emptyCard > p {
+#shop > #home > #side-tap > .card-wrapper > div .emptyCard > p {
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 1px;
@@ -268,6 +268,6 @@
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
 }
-#main > #home > #side-tap > .card-wrapper > div .emptyCard > p:hover {
+#shop > #home > #side-tap > .card-wrapper > div .emptyCard > p:hover {
     opacity: 1.0;
 }

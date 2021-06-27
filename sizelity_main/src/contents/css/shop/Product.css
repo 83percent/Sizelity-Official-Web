@@ -56,12 +56,15 @@ article#product > .side-tap > div.list-frame > ul > li > a.active > p {
     color: #000000;
 }
 article#product > .main-tap > header {
-    padding: 1.4rem 2.0rem 0.3rem 2.0rem;
+    padding: 1.4rem 2.0rem 1rem 2.0rem;
 }
 article#product > .main-tap > header > h1 {
-    padding-bottom: 0.7rem;
     font-size: 1.7rem;
     font-weight: 500;
+}
+article#product > .main-tap > header > p {
+    font-size: 0.9rem;
+    color: #00000090;
 }
 /*
     serach tap frame all common

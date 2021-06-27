@@ -40,7 +40,7 @@ const Login = ({history, match}) => {
         if(response?.status === 200) {
             setUser(response.data);
             console.log("입력 데이터 : ", response.data);
-            history.push(`/main`);
+            history.push(`/shop`);
 
         }
     }

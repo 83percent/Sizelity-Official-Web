@@ -2,8 +2,9 @@
 import { createContext, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
-// Component
+// Router Componnet
 import LoginRouter from './router/LoginRouter';
+import ShopRouter from './router/ShopRouter';
 import MainRouter from './router/MainRouter';
 
 // Font
@@ -30,8 +31,9 @@ function App() {
     <UserContext.Provider value={{user, setUser}}>
       <ServerContext.Provider value={__server}>
           <Switch>
-              <Route path="/account" component={LoginRouter}/>
-              <Route path="/main" component={MainRouter}/>
+              <Route exact path="/main" component={MainRouter}/>
+              <Route path="/account/:id" component={LoginRouter}/>
+              <Route path="/shop" component={ShopRouter}/>
           </Switch>
       </ServerContext.Provider>
     </UserContext.Provider>

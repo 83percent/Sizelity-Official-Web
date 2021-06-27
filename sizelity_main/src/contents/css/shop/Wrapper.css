@@ -1,34 +1,34 @@
-#main > .wrapper {
+#shop > .wrapper {
     flex-grow: 1;
     padding: 0 3rem;
 }
 
-#main > .wrapper > header > .title {
+#shop > .wrapper > header > .title {
     margin: 2rem 0;
 }
-#main > .wrapper > header > .title > h1 {
+#shop > .wrapper > header > .title > h1 {
     font-weight: 500;
     font-size: 2.0rem;
     letter-spacing: 2px;
 }
-#main > .wrapper > header > .title > .sub { 
+#shop > .wrapper > header > .title > .sub { 
     margin-top: 0.5rem;
 }
-#main > .wrapper > header > .title > .sub > p {
+#shop > .wrapper > header > .title > .sub > p {
     
     font-weight: 300;
     font-size: 0.9rem;
 }
 
 /*      Loader     */
-#main > .wrapper > div.loader-frame {
+#shop > .wrapper > div.loader-frame {
     width: 100%;
     padding-top: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#main > .wrapper > div.loader-frame > .loader {
+#shop > .wrapper > div.loader-frame > .loader {
     width: 2.5rem;
     height: 2.5rem;
     border: 2px solid #888888;

@@ -17,7 +17,7 @@ function get(type) {
         case 'onepiece' : return '원피스'
         case 'bottom' : return '하의'
         case 'skirt' : return '치마'
-        case 'shose' : return '신발'
+        case 'shoes' : return '신발'
         default : return null;
     }
 }

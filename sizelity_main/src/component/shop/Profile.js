@@ -6,7 +6,7 @@ import '../../contents/css/main/Profile.css';
 
 //Context
 import { ServerContext, UserContext } from '../../App';
-import { AlertToggle } from '../../router/MainRouter';
+import { AlertToggle } from '../../router/ShopRouter';
 
 const Profile = ({history}) => {
     // State

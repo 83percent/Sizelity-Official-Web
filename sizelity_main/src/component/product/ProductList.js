@@ -5,7 +5,7 @@ import TImeFormat from '../../contents/js/TImeFormat';
 
 // Context
 import { ServerContext } from '../../App';
-import { AlertToggle } from '../../router/MainRouter';
+import { AlertToggle } from '../../router/ShopRouter';
 
 const ProductList = ({match}) => {
     // State
