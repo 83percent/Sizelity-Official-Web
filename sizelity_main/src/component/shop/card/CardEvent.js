@@ -1,5 +1,5 @@
 const CardEvent = ({events}) => {
-    if(events?.length == 0) {
+    if(events?.length === 0) {
         return (
             <div className="card">
                 <div className="emptyCard ko">

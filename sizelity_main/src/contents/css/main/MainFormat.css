@@ -1,3 +1,7 @@
+#wrapper {
+    min-height: 100%;
+    height: 100%;
+}
 #wrapper > nav {
     width: 100%;
     position: fixed;
@@ -24,7 +28,7 @@
     cursor: pointer;
 }
 #wrapper > nav > .logo-frame > .logo > i {
-    font-size: 1.5rem;
+    font-size: 24px;
     color: #ffffff;
 }
 #wrapper > nav > .blur-frame {
@@ -38,10 +42,6 @@
 /*
     Main
 */
-#wrapper > main {
-    
-    overflow-y: auto;
-}
 #wrapper > main.preview {
     padding-top: 10rem;
 }
@@ -71,4 +71,11 @@
     font-weight: 400;
     font-size: 0.9rem;
     color: #ffffff90;
+}
+@media (max-width: 767px) {
+    #wrapper > nav > .logo-frame > .logo {
+        width: 4.3rem;
+        height: 4.3rem;
+        margin-top: 1rem;
+    }
 }

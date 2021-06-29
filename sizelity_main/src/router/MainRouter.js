@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Switch, Route } from "react-router";
 import { Link } from "react-router-dom";
 
@@ -9,7 +10,10 @@ import ReservationSuccess from '../component/main/ReservationSuccess';
 // CSS
 import '../contents/css/main/MainFormat.css';
 
-const AccountRouter = () => {
+const MainRouter = () => {
+    useEffect(() => {
+        window.scrollTo(0,0);
+    });
     return (
         <div id="wrapper">
             <nav>
@@ -47,4 +51,4 @@ const AccountRouter = () => {
         </div>
     )
 }
-export default AccountRouter;
+export default MainRouter;

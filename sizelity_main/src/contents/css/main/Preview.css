@@ -10,13 +10,22 @@
 #wrapper > main.preview > section.main > div.main-title {
     text-align: center;
 }
-#wrapper > main.preview > section.main > div.main-title > h1 {
-    font-size: 70px;
-    font-weight: 700;
+#wrapper > main.preview > section.main > div.main-title > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
 }
+#wrapper > main.preview > section.main > div.main-title > div > h1 {
+    font-size: 4.3rem;
+    font-weight: 700;
+}
+#wrapper > main.preview > section.main > div.main-title > div > h1:first-child {
+    margin-right: 1rem;
+}
 #wrapper > main.preview > section.main > div.main-title > p {
-    font-size: 21px;
+    font-size: 1.3rem;
     color: #555555;
     font-weight: 400;
 }

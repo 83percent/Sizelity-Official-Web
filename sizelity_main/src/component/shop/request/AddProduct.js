@@ -12,10 +12,10 @@ const AddProduct = ({url}) => {
             if(value) {
                 const _d = ProductType.getSizeRate(value)
                 
-                const  _l = new Object();
+                const  _l = {};
                 _l.sname = '';
-                for(const [e,_] of _d) {
-                    _l[e] = 0;
+                for(const e of _d) {
+                    _l[e[0]] = 0;
                 }
                 sizeDataFormat.current = _l;
 
@@ -192,14 +192,14 @@ const List = ({type, sizeData, listAddHandler,listRemoveHandler, listDataOnChang
                                                     <td key={i2}>
                                                         <input name={element[0]} type="number" min={0} placeholder="-"
                                                             onChange={(e) => listDataOnChange(index, element[0], e.target.value)}
-                                                            defaultValue={dataArrayElement[element[0]] != 0 ? dataArrayElement[element[0]] : null}/>
+                                                            defaultValue={dataArrayElement[element[0]] !== 0 ? dataArrayElement[element[0]] : null}/>
                                                     </td>
                                                 ))
                                             }
                                             <td>
                                                 <i className="material-icons" onClick={() => event.listRemoveHandler(index)}>remove</i>
                                                 {
-                                                    index == sizeData.length-1 
+                                                    index === sizeData.length-1 
                                                     ? null//(<i className="material-icons" onClick={(e) => event.listRemoveHandler(index)}>remove</i>) 
                                                     : null
                                                 }

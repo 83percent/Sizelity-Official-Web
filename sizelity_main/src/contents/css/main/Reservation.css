@@ -12,7 +12,9 @@ section.reserve-card {
 }
 .reserve-card > .main-title {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     padding-top: 8rem;
 }
 .reserve-card > .main-title > h1:first-child {
@@ -20,14 +22,14 @@ section.reserve-card {
     color: #00966B;
 }
 .reserve-card > .main-title > h1 {
-    font-size: 65px;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 section.reserve-card > a {
     cursor: pointer;
     color: #06c;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -45,32 +47,28 @@ section.reserve-card .title-frame > h2 {
     font-size: 1.6rem;
 }
 section.reserve-card .text-frame > p {
-    font-size: 17px;
+    font-size: 1rem;
 }
 /*
     Reservation Page
 */
 main.reservation {
-    padding-top: 5rem;
+    padding-top: 3rem;
+    min-height: 100%;
 }
 main.reservation > section.top {
     display: flex;
-    padding: 0 5rem;
-}
-main.reservation > section.top > div {
-    
+    align-items: center;
+    justify-content: center;
 }
 main.reservation > section > .left {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 8rem; 
     padding-bottom: 8rem;
+}
 
-}
-main.reservation > section > .left > .main-title {
-    
-}
+
 main.reservation > section > .left > .main-title > h1 {
     font-size: 3.8rem;
     font-weight: 700;
@@ -79,7 +77,6 @@ main.reservation > section > .left > .main-title > h1 {
 
 main.reservation > section > .right {
     text-align: center; 
-    flex-basis: 100%;
 }
 main.reservation > section > .right > img {
     min-width: 70%;
@@ -172,7 +169,6 @@ main.reservation button {
     width: 29rem;
     padding: 0.5rem 0;
     margin-top: 0.85rem;
-    font-size: 0.9rem;
     font-weight: 400;
     border-radius: 6px;
 }
@@ -202,4 +198,59 @@ main.reservation > section.top > .left > a > p {
 }
 main.reservation > section.top > .left > a:hover > p {
     text-decoration: underline;
+}
+@media (max-width: 767px) {
+    main.reservation {
+        padding-top: 8rem;
+    }
+    main.reservation > section > .left > .main-title {
+        text-align: center;
+    }
+    main.reservation > section > .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 8rem;
+    }
+    main.reservation > section > .right {
+        display: none;
+    }
+    main.reservation ul.info-input {
+        width: 100%;
+        align-items: center;
+    }
+    main.reservation ul.info-input > li {
+        width: 100%;
+        padding: 1rem 1.2rem;
+    }
+    main.reservation ul.info-input > li > label > p {
+        font-size: 1.5rem;
+    }
+    main.reservation ul.info-input > li > label > input {
+        width: 100%;
+        font-size: 1.8rem;
+    }
+    main.reservation ul.checklist {
+        width: 100%;
+    }
+    main.reservation ul.checklist > li > label > i {
+        font-size: 2.0rem;
+    }
+    main.reservation ul.checklist > li > label > p {
+        width: auto;
+        padding-right: 2rem;
+        font-size: 1.7rem;
+    }
+    main.reservation button { 
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 1.5rem;
+    }
+    main.reservation > section.top > .left > a > p {
+        font-size: 1.5rem;
+    }
+    main.reservation > section.top > .left > h4 {
+        font-size: 1.2rem;
+    }
 }

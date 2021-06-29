@@ -1,6 +1,6 @@
-import { useContext, createContext, useRef } from "react";
-import { Switch, Route, NavLink, Link } from "react-router-dom";
-import { UserContext } from "../App";
+import { createContext, useRef } from "react";
+import { Switch, Route, NavLink } from "react-router-dom";
+//import { UserContext } from "../App";
 
 // Component
 import HomeComp from '../component/shop/Home';
@@ -17,7 +17,7 @@ export const AlertToggle = createContext(null);
 
 const ShopRouter = () => {
     // Context
-    const {user} = useContext(UserContext);
+    // const {user} = useContext(UserContext);
     //if(!user?._id || !user?.sname) 로그인 없이 접근 시 처리
 
     // Ref
@@ -30,7 +30,7 @@ const ShopRouter = () => {
                 if(!wrapperClass.contains("off")) {
                     wrapperClass.add("off");
                     setTimeout(() => {
-                        if(msg != undefined) {
+                        if(msg !== undefined) {
                             alertCaution.current.innerHTML = msg;
                         }
                         switch(type) {
@@ -51,7 +51,7 @@ const ShopRouter = () => {
                         wrapperClass.remove("off");
                     }, 350);
                 } else {
-                    if(msg != undefined) {
+                    if(msg !== undefined) {
                         alertCaution.current.innerHTML = msg;
                     }
                     switch(type) {

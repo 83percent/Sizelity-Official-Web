@@ -4,7 +4,7 @@ import FatchCredit from './FatchCredit';
 
 const Fatch = ({history, location}) => {
     console.log("Fatch ",location.state)
-    const data = location.state?.data;
+    //const data = location.state?.data;
     const type = location.state?.type;
     const title = ((type) => {
         switch(type) {
@@ -17,6 +17,7 @@ const Fatch = ({history, location}) => {
             case 'credit' : {
                 return "결제 정보 변경"
             }
+            default : {}
         }
     })(type);
 
@@ -53,9 +54,9 @@ const Fatch = ({history, location}) => {
                 {
                     type === 'account' ? (
                         <FatchAccount data={location.state?.data} />
-                    ) : type == 'contact' ? (
+                    ) : type === 'contact' ? (
                         <FatchContact data={location.state?.data?.info} />
-                    ) : type == 'credit' ? (
+                    ) : type === 'credit' ? (
                         <FatchCredit />
                     ) : (<div></div>)
                 }

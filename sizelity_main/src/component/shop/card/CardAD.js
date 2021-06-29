@@ -1,5 +1,5 @@
 const CardAD = ({ADs}) => {
-    if(ADs?.length == 0) {
+    if(ADs?.length === 0) {
         return (
             <div className="card">
                 <div className="emptyCard ko">

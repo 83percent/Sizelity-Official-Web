@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 
-
 // Image
-//import MainImage from '../../contents/image/iPhone12_Clay_Shadow.png';
 import MainImage from '../../contents/image/phone.png';
 
 // CSS
@@ -11,20 +9,26 @@ import '../../contents/css/main/Reservation.css';
 
 
 const Preview = () => {
+    
+    
     return (
         <main className="preview">
             <section className="main">
                 <div className="main-title">
-                    <h1>사이즈비교의 새로운 기준.</h1>
+                    <div>
+                        <h1>사이즈비교의</h1>
+                        <h1>새로운 기준.</h1>
+                    </div>
+                    
                     <p>쇼핑몰간 경계없이, 고객의 이전 구매 상품들과 판매중인 상품을 비교해보세요.</p>
                     <p>실제 고객의 옷과 비교해 최적의 사이즈를 구매할 수 있도록 도와줍니다.</p>
                 </div>
-                <img src={MainImage} alt="Main Image"/>
+                <img src={MainImage} alt="Main"/>
             </section>
             <section className="reserve-card">
                 <div className="main-title">
                     <h1>사전등록</h1>
-                    <h1>해택 받아가세요.</h1>
+                    <h1>혜택 받아가세요.</h1>
                 </div>
                 <Link to="/main/reservation">
                     <p>지금 사전등록 하러가기</p>

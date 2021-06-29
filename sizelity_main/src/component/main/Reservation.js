@@ -11,10 +11,11 @@ import '../../contents/css/main/Reservation.css';
 import {ServerContext} from '../../App';
 import { useContext, useRef } from 'react';
 
-const Reservation = () => {
+const Reservation = ({history}) => {
+    
+
 
     // Ref
-    const inputDomainFrame = useRef(null);
     const errorFrame = useRef(null);
     const data = useRef({
         domain : undefined,
@@ -40,12 +41,26 @@ const Reservation = () => {
             await axios({
                 method : 'POST',
                 url : `${server}/reservation`,
-                data : data,
+                data : data.current,
                 timeout : 3500
             }).then((response) => {
+                console.log(response);
+                switch(response.status) {
+                    case 200 : {
+                        history.push('/main/reservation/success');
+                        break;
+                    }
+                    case 202 : {
+                        this.toggleError("already");
+                        break;
+                    }
+                    default : {
+                        this.toggleError();
+                    }
+                }
                 
-            }).catch((err) => {
-
+            }).catch(() => {
+                this.toggleError();
             });
         }, // send
         checkData : function() {
@@ -65,6 +80,7 @@ const Reservation = () => {
                 this.toggleError('tel');
                 return false;
             }
+            
             const isEmail = ((value) => {
                 return (/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i).test(value);
             })(_n.email);
@@ -101,8 +117,12 @@ const Reservation = () => {
                     _text = '필수 약관에 모두 동의해주세요.';
                     break;
                 }
+                case 'already' : {
+                    _text = '이미 사전등록된 쇼핑몰입니다.'
+                    break;
+                }
                 default : {
-                    _text = 'Error';
+                    _text = '문제가 발생했습니다.';
                     break;
                 }
             }
@@ -130,7 +150,7 @@ const Reservation = () => {
                         <li>
                             <label>
                                 <p>대표자명</p>
-                                <input type="text" placeholder="홍길동" onChange={(e) => {
+                                <input type="text" placeholder="장윤희" onChange={(e) => {
                                     data.current.name = e.target.value;
                                 }}/>
                             </label>
@@ -138,7 +158,7 @@ const Reservation = () => {
                         <li>
                             <label>
                                 <p>연락가능한 연락처</p>
-                                <input type="text" placeholder="010XXXXXXXX" onChange={(e) => {
+                                <input type="number" placeholder="010XXXXXXXX" onChange={(e) => {
                                     data.current.tel = e.target.value;
                                 }}/>
                             </label>
@@ -146,7 +166,7 @@ const Reservation = () => {
                         <li>
                             <label>
                                 <p>확인가능한 이메일</p>
-                                <input type="text" placeholder="email@example.com" onChange={(e) => {
+                                <input type="email" placeholder="email@example.com" onChange={(e) => {
                                     data.current.email = e.target.value;
                                 }}/>
                             </label>
@@ -194,7 +214,7 @@ const Reservation = () => {
                     </Link>
                 </div>
                 <div className="right">
-                    <img src={MainImage} />
+                    <img src={MainImage} alt="main"/>
                 </div>  
             </section>
         </main>

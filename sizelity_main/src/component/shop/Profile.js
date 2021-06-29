@@ -43,36 +43,39 @@ const Profile = ({history}) => {
             });
         }
     }
-    async function send() {
-        const response = await axios({
-            method: 'GET',
-            url : `${server}/user/${user._id}`,
-            withCredentials: true,
-            timeout: 3500
-        }).catch(err => {
-            switch(err?.response?.status) {
-                case 400 : {
-                    alert(true, "<p>잘못된 접근입니다.</p>", "error");
-                    break;
+    
+    useEffect(() => { 
+        async function send() {
+            const response = await axios({
+                method: 'GET',
+                url : `${server}/user/${user._id}`,
+                withCredentials: true,
+                timeout: 3500
+            }).catch(err => {
+                switch(err?.response?.status) {
+                    case 400 : {
+                        alert(true, "<p>잘못된 접근입니다.</p>", "error");
+                        break;
+                    }
+                    case 401 : {
+                        alert(true, "<p>로그인이 필요한 작업입니다.</p>", "error");
+                        break;
+                    }
+                    case 404 : 
+                    case 500 :
+                    default : {
+                        alert(true, "<p>서버에 문제가 발생했습니다.</p><p>잠시후 다시 시도해주세요.</p>", "error");
+                    }
                 }
-                case 401 : {
-                    alert(true, "<p>로그인이 필요한 작업입니다.</p>", "error");
-                    break;
-                }
-                case 404 : 
-                case 500 :
-                default : {
-                    alert(true, "<p>서버에 문제가 발생했습니다.</p><p>잠시후 다시 시도해주세요.</p>", "error");
-                }
+                
+            });
+            if(response?.status === 200) {
+                setTimeout(() => setData(response.data), 400);
+                
             }
-            
-        });
-        if(response?.status == 200) {
-            setTimeout(() => setData(response.data), 400);
-            
         }
-    }
-    useEffect(() => { send(); }, []);
+        send();
+    }, [alert, server, user._id]);
     if(data === null) {
         return (
             <article className="wrapper">

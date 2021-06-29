@@ -14,7 +14,16 @@ const Main = () => {
     const [requestNum, setRequestNum] = useState(0);
     const [ADs, setADs] = useState([]);
     const [events, setEvents] = useState([]);
-
+    const event = {
+        test : function(){
+            setProductNum(1);
+            setRequestNum(2);
+            setADs(1);
+            setEvents(1);
+        }
+    }
+    console.log(event);
+    
     // Context
     const {user} = useContext(UserContext);
     const server = useContext(ServerContext);

@@ -22,9 +22,9 @@ const ProductExpires = () => {
     const _loaderMaxCount = 15;
 
     const event = {
-        getInitList : async function() {
+       /*  getInitList : async function() {
             this.getData(0);
-        }, // getInitList()
+        }, // getInitList() */
         getData : async function(count) {
             setLoader(true);
             await axios({

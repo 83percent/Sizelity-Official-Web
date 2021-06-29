@@ -4,7 +4,8 @@ const COLL_NAME = 'reservation';
 const ReservationModel = new Mongoose.Schema({
     domain : { 
         type: String,
-        require: true
+        require: true,
+        unique: true
     },
     name : {
         type: String,

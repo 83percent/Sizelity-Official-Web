@@ -1,5 +1,6 @@
 // 200
 const success = 200;
+const already = 202;
 
 // 400
 const badRequest = 400;
@@ -13,6 +14,7 @@ const error = 500;
 module.exports = {
     // 200
     success,
+    already,
 
     //400
     badRequest,
