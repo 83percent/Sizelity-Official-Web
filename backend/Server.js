@@ -14,6 +14,7 @@ const PORT = 3002;
 const LoginRouter = require('./router/LoginRouter');
 const UserRouter = require('./router/UserRouter');
 const ProductRouter = require('./router/ProductRouter');
+const Reservation = require('./router/ReservationRouter');
 
 /* ================================
             Server start
@@ -68,6 +69,11 @@ server.use('/product', (req, res, next) => {
     if(req.isAuthenticated()) next();
     else res.sendStatus(401);
 }, ProductRouter);
+
+
+// Reservation
+server.use('/reservation', Reservation);
+
 
 // Route Connect
 

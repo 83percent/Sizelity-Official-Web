@@ -1,8 +1,10 @@
 import { Switch, Route } from "react-router";
+import { Link } from "react-router-dom";
 
 // Component
 import Preview from '../component/main/Preview';
 import Reservation from '../component/main/Reservation';
+import ReservationSuccess from '../component/main/ReservationSuccess';
 
 // CSS
 import '../contents/css/main/MainFormat.css';
@@ -12,9 +14,9 @@ const AccountRouter = () => {
         <div id="wrapper">
             <nav>
                 <div className="logo-frame">
-                    <div className="logo">
+                    <Link to="/" className="logo">
                         <i className="material-icons">local_offer</i>
-                    </div>
+                    </Link>
                     
                 </div>  
                 <div className="blur-frame"></div>
@@ -22,7 +24,8 @@ const AccountRouter = () => {
             <Switch>
                 <Route exact path="/" component={Preview} />
                 <Route exact path="/main" component={Preview} />
-                <Route path="/main/reservation" component={Reservation} />
+                <Route exact path="/main/reservation" component={Reservation} />
+                <Route exact path="/main/reservation/success" component={ReservationSuccess} />
             </Switch>
             <footer>
                 <address>

@@ -64,8 +64,8 @@ main.reservation > section > .left {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 8rem;
-    width: 100%;
+    padding-left: 8rem; 
+    padding-bottom: 8rem;
 
 }
 main.reservation > section > .left > .main-title {
@@ -78,12 +78,12 @@ main.reservation > section > .left > .main-title > h1 {
 }
 
 main.reservation > section > .right {
-    text-align: center;
-    flex-shrink: 1;
+    text-align: center; 
+    flex-basis: 100%;
 }
 main.reservation > section > .right > img {
     min-width: 70%;
-    width: 80%;
+    width: 45rem;
 }
 main.reservation ul.info-input {
     display: flex;
@@ -109,6 +109,9 @@ main.reservation ul.info-input > li input {
     cursor: auto;
 }
 main.reservation ul.checklist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-top: 1rem;
 }
 main.reservation ul.checklist > li {
@@ -122,7 +125,7 @@ main.reservation ul.checklist > li > label {
 main.reservation ul.checklist > li > label > i {
     margin-right: 1rem;
     font-size: 1.3rem;
-    padding: 0.2rem;
+    padding: 0.1rem;
     color: #000000;
     border-radius: 50%;
     opacity: 0.3;
@@ -159,4 +162,44 @@ main.reservation ul.checklist > li > label.check > i {
 }
 main.reservation ul.checklist > li > label.check > p {
     opacity: 1.0;
+}
+main.reservation button {
+    all: unset;
+    background: #00966B;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    width: 29rem;
+    padding: 0.5rem 0;
+    margin-top: 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 6px;
+}
+main.reservation button.abled {
+    opacity: 1;
+}
+main.reservation > section.top > .left > h4 {
+    color: #ff0000;
+    font-weight: 400;
+    margin-top: 2px;
+    visibility: hidden;
+}
+main.reservation > section.top > .left > h4.active {
+    visibility: visible;
+}
+main.reservation > section.top > .left > a {
+    cursor: pointer;
+    color: #06c;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+main.reservation > section.top > .left > a > p {
+    position: relative;
+    top: 1px;
+}
+main.reservation > section.top > .left > a:hover > p {
+    text-decoration: underline;
 }

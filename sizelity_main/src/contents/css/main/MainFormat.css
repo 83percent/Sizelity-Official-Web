@@ -21,6 +21,7 @@
     justify-content: center;
     border-radius: 8px;
     background: #00966B;
+    cursor: pointer;
 }
 #wrapper > nav > .logo-frame > .logo > i {
     font-size: 1.5rem;
