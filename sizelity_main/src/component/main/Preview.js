@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom';
 import MainImage from '../../contents/image/phone.png';
 
 // CSS
-import '../../contents/css/main/Reserve.css';
+import '../../contents/css/main/Preview.css';
+import '../../contents/css/main/Reservation.css';
 
 
 const Preview = () => {
     return (
-        <main>
+        <main className="preview">
             <section className="main">
                 <div className="main-title">
                     <h1>사이즈비교의 새로운 기준.</h1>
@@ -20,12 +21,12 @@ const Preview = () => {
                 </div>
                 <img src={MainImage} alt="Main Image"/>
             </section>
-            <section className="reserve">
+            <section className="reserve-card">
                 <div className="main-title">
                     <h1>사전등록</h1>
                     <h1>해택 받아가세요.</h1>
                 </div>
-                <Link>
+                <Link to="/main/reservation">
                     <p>지금 사전등록 하러가기</p>
                     <i className="material-icons">chevron_right</i>
                 </Link>

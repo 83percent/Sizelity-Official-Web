@@ -1,0 +1,26 @@
+#wrapper > main.preview {
+    padding-top: 10rem;
+    overflow-y: auto;
+}
+#wrapper > main.preview > section.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#wrapper > main.preview > section.main > div.main-title {
+    text-align: center;
+}
+#wrapper > main.preview > section.main > div.main-title > h1 {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+#wrapper > main.preview > section.main > div.main-title > p {
+    font-size: 21px;
+    color: #555555;
+    font-weight: 400;
+}
+#wrapper > main.preview > section.main > img {
+    margin-top: 3rem;
+    width: 40rem;   
+}

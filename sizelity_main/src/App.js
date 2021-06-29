@@ -31,7 +31,8 @@ function App() {
     <UserContext.Provider value={{user, setUser}}>
       <ServerContext.Provider value={__server}>
           <Switch>
-              <Route exact path="/main" component={MainRouter}/>
+              {/* <Route path="/main" component={MainRouter}/> */}
+              <Route path={["/","/main"]} component={MainRouter}/>
               <Route path="/account/:id" component={LoginRouter}/>
               <Route path="/shop" component={ShopRouter}/>
           </Switch>

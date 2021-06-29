@@ -1,9 +1,9 @@
-#preview > nav {
+#wrapper > nav {
     width: 100%;
     position: fixed;
     top: 0;
 }
-#preview > nav > .logo-frame {
+#wrapper > nav > .logo-frame {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +13,7 @@
     padding-top: 0.7rem;
     background: rgb(255,255,255, 0.9);
 }
-#preview > nav > .logo-frame > .logo {
+#wrapper > nav > .logo-frame > .logo {
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -22,11 +22,11 @@
     border-radius: 8px;
     background: #00966B;
 }
-#preview > nav > .logo-frame > .logo > i {
+#wrapper > nav > .logo-frame > .logo > i {
     font-size: 1.5rem;
     color: #ffffff;
 }
-#preview > nav > .blur-frame {
+#wrapper > nav > .blur-frame {
     height: 3.3rem;
     background: rgb(255,255,255);
     background: -moz-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 100%);
@@ -34,53 +34,38 @@
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff90",GradientType=1);
 }
-#preview > main {
-    padding-top: 10rem;
+/*
+    Main
+*/
+#wrapper > main {
+    
     overflow-y: auto;
 }
-#preview > main > section.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#wrapper > main.preview {
+    padding-top: 10rem;
 }
-#preview > main > section.main > div.main-title {
-    text-align: center;
-}
-#preview > main > section.main > div.main-title > h1 {
-    font-size: 70px;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-#preview > main > section.main > div.main-title > p {
-    font-size: 21px;
-    color: #555555;
-    font-weight: 400;
-}
-#preview > main > section.main > img {
-    margin-top: 3rem;
-    width: 40rem;   
-}
+
 /*
     footer
 */
 
-#preview > footer {
+#wrapper > footer {
     background: #00000080;
     padding: 3rem 15%;
 }
-#preview > footer > address {
+#wrapper > footer > address {
     color: #ffffff; 
 }
-#preview > footer > address > strong {
+#wrapper > footer > address > strong {
     font-size: 1.1rem;
     margin-bottom: 0.3rem;
 }
-#preview > footer > address > ul > li {
+#wrapper > footer > address > ul > li {
     display: flex;
     align-items: center;
     margin-top: 0.3rem;
 }
-#preview > footer > address > ul > li > p {
+#wrapper > footer > address > ul > li > p {
     margin-right: 1rem;
     font-weight: 400;
     font-size: 0.9rem;

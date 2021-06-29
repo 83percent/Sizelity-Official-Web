@@ -2,24 +2,27 @@ import { Switch, Route } from "react-router";
 
 // Component
 import Preview from '../component/main/Preview';
+import Reservation from '../component/main/Reservation';
 
 // CSS
-import '../contents/css/main/Account.css';
+import '../contents/css/main/MainFormat.css';
 
 const AccountRouter = () => {
     return (
-        <div id="preview">
+        <div id="wrapper">
             <nav>
                 <div className="logo-frame">
                     <div className="logo">
                         <i className="material-icons">local_offer</i>
                     </div>
                     
-                </div>
+                </div>  
                 <div className="blur-frame"></div>
             </nav>
             <Switch>
+                <Route exact path="/" component={Preview} />
                 <Route exact path="/main" component={Preview} />
+                <Route path="/main/reservation" component={Reservation} />
             </Switch>
             <footer>
                 <address>
