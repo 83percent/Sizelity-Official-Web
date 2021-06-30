@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Preview from '../component/main/Preview';
 import Reservation from '../component/main/Reservation';
 import ReservationSuccess from '../component/main/ReservationSuccess';
+import Ready from '../component/main/Ready';
 
 // CSS
 import '../contents/css/main/MainFormat.css';
@@ -30,6 +31,7 @@ const MainRouter = () => {
                 <Route exact path="/main" component={Preview} />
                 <Route exact path="/main/reservation" component={Reservation} />
                 <Route exact path="/main/reservation/success" component={ReservationSuccess} />
+                <Route path="/main/ready" component={Ready} />
             </Switch>
             <footer>
                 <address>

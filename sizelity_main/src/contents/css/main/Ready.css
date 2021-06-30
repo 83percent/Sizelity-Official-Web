@@ -1,0 +1,19 @@
+main.ready {
+    min-height: 100%;
+}
+main.ready > section.top {
+    padding-top: 8rem;
+    text-align: center;
+}
+main.ready > section.top > h1 {
+    font-size: 4.0rem;
+    font-weight: 700;
+}
+main.ready > section.top > div {
+    margin-top: 1rem;
+}
+main.ready > section.top > div > p {
+    color: #00000090;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
