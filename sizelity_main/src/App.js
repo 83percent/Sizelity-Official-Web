@@ -32,9 +32,9 @@ function App() {
       <ServerContext.Provider value={__server}>
           <Switch>
               {/* <Route path="/main" component={MainRouter}/> */}
-              <Route path={["/","/main"]} component={MainRouter}/>
               <Route path="/account/:id" component={LoginRouter}/>
               <Route path="/shop" component={ShopRouter}/>
+              <Route path={["/","/main"]} component={MainRouter}/>
           </Switch>
       </ServerContext.Provider>
     </UserContext.Provider>

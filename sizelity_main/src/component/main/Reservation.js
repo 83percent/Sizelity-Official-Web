@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 // Image
-import MainImage from '../../contents/image/text_phone.png';
+import MainImage from '../../contents/image/compare.png';
 
 // CSS
 import '../../contents/css/main/Reservation.css';

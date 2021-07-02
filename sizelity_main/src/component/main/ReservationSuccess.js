@@ -15,7 +15,7 @@ const ReservationSuccess = () => {
                 </div>
                 <ul>
                     <li>
-                        <Link to="/">
+                        <Link to="/ready">
                             <p>서비스 시작 전 준비사항</p>
                             <i className="material-icons">chevron_right</i>
                         </Link>

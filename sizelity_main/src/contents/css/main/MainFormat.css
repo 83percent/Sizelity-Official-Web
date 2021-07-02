@@ -5,16 +5,17 @@
 #wrapper > nav {
     width: 100%;
     position: fixed;
+    z-index: 999;
     top: 0;
 }
 #wrapper > nav > .logo-frame {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     z-index: 999;
-    height: 3.2rem;
-    padding-top: 0.7rem;
+    padding-top: 0.9rem;
     background: rgb(255,255,255, 0.9);
 }
 #wrapper > nav > .logo-frame > .logo {
@@ -31,6 +32,45 @@
     font-size: 24px;
     color: #ffffff;
 }
+#wrapper > nav > .logo-frame > ul {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 0px;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+}
+#wrapper > nav > .logo-frame:hover > ul, #wrapper > nav > .logo-frame.on > ul {
+    height: 3rem;
+}
+#wrapper > nav > .logo-frame > ul > li {
+    padding: 1rem 0;
+    
+    text-align: center;
+    min-width: 10rem;
+    max-width: 10rem;
+}
+#wrapper > nav > .logo-frame > ul > li > a {
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    color: #000000;
+    opacity: 0;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+}
+#wrapper > nav > .logo-frame:hover > ul > li > a, #wrapper > nav > .logo-frame.on > ul > li > a {
+    opacity: 1;
+}
+#wrapper > nav > .logo-frame > ul > li > a:hover {
+    color: #00966B;
+}
 #wrapper > nav > .blur-frame {
     height: 3.3rem;
     background: rgb(255,255,255);
@@ -39,13 +79,18 @@
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff90",GradientType=1);
 }
+#wrapper > nav > .logo-frame > ul > li > a.active {
+    color: #00966B;
+}
 /*
     Main
 */
 #wrapper > main.preview {
     padding-top: 10rem;
 }
-
+#wrapper > main {
+    min-height: 100%;
+}
 /*
     footer
 */

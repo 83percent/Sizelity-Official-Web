@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 // Image
-import MainImage from '../../contents/image/phone.png';
+import MainImage from '../../contents/image/compare.png';
 
 // CSS
 import '../../contents/css/main/Preview.css';

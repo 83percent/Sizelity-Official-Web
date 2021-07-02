@@ -81,6 +81,7 @@ main.reservation > section > .right {
 main.reservation > section > .right > img {
     min-width: 70%;
     width: 45rem;
+    padding-top: 3rem;
 }
 main.reservation ul.info-input {
     display: flex;
