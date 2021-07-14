@@ -33,8 +33,9 @@
     color: #ffffff;
 }
 #wrapper > nav > .logo-frame > ul {
-    width: 50%;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -82,6 +83,9 @@
 #wrapper > nav > .logo-frame > ul > li > a.active {
     color: #00966B;
 }
+#wrapper > div.menu-btn {
+    display: none;
+}
 /*
     Main
 */
@@ -97,7 +101,42 @@
 
 #wrapper > footer {
     background: #00000080;
-    padding: 3rem 15%;
+    padding: 3rem 20% 2rem 20%;
+}
+#wrapper > footer > ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+#wrapper > footer > ul > li {
+    margin-right: 5rem;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+}
+#wrapper > footer > ul > li:last-child {
+    margin: 0;
+    margin-right: 0;
+}
+#wrapper > footer > ul > li > h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1.0rem;
+}
+#wrapper > footer > ul > li > div {
+    display: flex;
+    align-items: center;
+}
+#wrapper > footer > ul > li > div > a {
+    all: unset;
+    display: block;
+    cursor: pointer;
+    color: #ffffff90;
+    font-size: 0.85rem;
+    padding-right: 1.0rem;
+    padding-left: 1.0rem;
+}
+#wrapper > footer > ul > li > div > a:first-child {
+    border: none;
+    padding-left: 0;
 }
 #wrapper > footer > address {
     color: #ffffff; 
@@ -117,10 +156,59 @@
     font-size: 0.9rem;
     color: #ffffff90;
 }
+#wrapper > footer > div {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+#wrapper > footer > div > p, #wrapper > footer > div a {
+    font-size: 0.9rem;
+    color: #ffffff90;
+}
+#wrapper > footer > div > ul {
+    display: flex;
+    align-items: center;
+    
+}
+#wrapper > footer > div > ul > li {
+    cursor: pointer;
+    margin-left: 2rem;
+}
+#wrapper > footer a:hover {
+    text-decoration: underline;
+}
+/*
+    Phone
+*/
 @media (max-width: 767px) {
     #wrapper > nav > .logo-frame > .logo {
-        width: 4.3rem;
-        height: 4.3rem;
+        width: 3.2rem;
+        height: 3.2rem;
         margin-top: 1rem;
+    }
+    #wrapper > nav > .logo-frame > .logo > i {
+        font-size: 2.0rem;
+    }
+    #wrapper > nav > .logo-frame > ul {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+    #wrapper > nav > .logo-frame > ul {
+        height: 0px;
+    }
+    #wrapper > nav > .logo-frame:hover > ul, #wrapper > nav > .logo-frame.on > ul {
+        height: auto;
+    }
+    #wrapper > nav > .logo-frame > ul > li > a {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    #wrapper > div.menu-btn {
+        display: block;
+        position: fixed;
+        top: 1.5rem;
+        right: 0.5rem;
+        padding: 1rem;
+        z-index: 999;
     }
 }

@@ -25,7 +25,7 @@ main.intro > .top > div {
 */
 main.intro > section.content {
     display: flex;
-    border: 1px solid red;
+    
     padding: 5rem 0;
 }
 main.intro > section.content > div {
@@ -34,4 +34,9 @@ main.intro > section.content > div {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+}
+main.intro > section.icon-design {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

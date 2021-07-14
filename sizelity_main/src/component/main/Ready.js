@@ -120,14 +120,11 @@ const Ready = () => {
                         <i className="material-icons">link</i>
                     </div>
                     <h1>사이즈리티 링크 버튼.</h1>
+                    <h2></h2>
                 </div>
-                <div className="image-wrapper">
-                    
+                <div>
                     
                 </div>
-                <ul>
-
-                </ul>
             </section>
         </main>
     )

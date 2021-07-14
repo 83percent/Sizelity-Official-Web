@@ -6,6 +6,7 @@ import { Switch, Route } from "react-router-dom";
 import LoginRouter from './router/LoginRouter';
 import ShopRouter from './router/ShopRouter';
 import MainRouter from './router/MainRouter';
+import TermsRouter from './router/TermsRouter';
 
 // Font
 import './contents/fonts/Montserrat_use.css';
@@ -34,6 +35,7 @@ function App() {
               {/* <Route path="/main" component={MainRouter}/> */}
               <Route path="/account/:id" component={LoginRouter}/>
               <Route path="/shop" component={ShopRouter}/>
+              <Route exact path="/terms/:cate" component={TermsRouter} />
               <Route path={["/","/main"]} component={MainRouter}/>
           </Switch>
       </ServerContext.Provider>

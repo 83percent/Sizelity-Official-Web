@@ -20,7 +20,7 @@ const MainRouter = () => {
         window.scrollTo(0,0);
         window.addEventListener('scroll', function() {
             NavFrame.current.classList.remove('on');
-        }, {once:true});
+        }, {once:true});    
     });
     return (
         <div id="wrapper">
@@ -50,6 +50,9 @@ const MainRouter = () => {
                 </div>
                 <div className="blur-frame"></div>
             </nav>
+            <div className="menu-btn" onClick={() => NavFrame.current.classList.toggle('on')}>
+                <i className="material-icons">menu</i>
+            </div>
             <Switch>
                 <Route exact path="/" component={Preview} />
                 <Route exact path="/main" component={Preview} />
@@ -61,6 +64,24 @@ const MainRouter = () => {
                 <Route path="/intro" component={Intro} />
             </Switch>
             <footer>
+                <ul>
+                    <li>
+                        <h3>서비스</h3>
+                        <div>
+                            <Link to="/notice">공지사항</Link>
+                            <Link to="/intro">서비스 소개</Link>
+                            <Link to="/ready">준비사항</Link>
+                            <Link to="/main/reservation">사전등록</Link>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>고객지원</h3>
+                        <div>
+                            <Link to="/help">고객센터</Link>
+                            <Link to="/faq">자주 묻는 질문</Link>
+                        </div>
+                    </li>
+                </ul>
                 <address>
                     <strong>사이즈리티</strong>
                     <ul>
@@ -76,6 +97,20 @@ const MainRouter = () => {
                         </li>
                     </ul>
                 </address>
+                <div>
+                    <p>Copyright By Sizelity.</p>
+                    <ul>
+                        <li>
+                            <Link to="/terms/service">서비스 이용약관</Link>
+                        </li>
+                        <li>
+                            <Link to="/terms/notice">서비스 지원업체 고지사항</Link>
+                        </li>
+                        <li>
+                            <Link to="/terms/privacy">개인정보 처리방침</Link>
+                        </li>
+                    </ul>
+                </div>
             </footer>
         </div>
     )

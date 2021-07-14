@@ -214,11 +214,17 @@ main.reservation > section.top > .left > a:hover > p {
         justify-content: center;
         padding-bottom: 8rem;
     }
+    main.reservation > section > .left > .main-title > h1 {
+        white-space: pre-wrap;
+        word-break: keep-all;
+        font-size: 3.5rem;
+        padding: 0 4rem;
+    }
     main.reservation > section > .right {
         display: none;
     }
     main.reservation ul.info-input {
-        width: 100%;
+        width: 90%;
         align-items: center;
     }
     main.reservation ul.info-input > li {
@@ -226,14 +232,14 @@ main.reservation > section.top > .left > a:hover > p {
         padding: 1rem 1.2rem;
     }
     main.reservation ul.info-input > li > label > p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     main.reservation ul.info-input > li > label > input {
         width: 100%;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     main.reservation ul.checklist {
-        width: 100%;
+        width: 90%;
     }
     main.reservation ul.checklist > li > label > i {
         font-size: 2.0rem;
@@ -241,10 +247,10 @@ main.reservation > section.top > .left > a:hover > p {
     main.reservation ul.checklist > li > label > p {
         width: auto;
         padding-right: 2rem;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
     main.reservation button { 
-        width: 100%;
+        width: 90%;
         padding: 1rem 0;
         font-size: 1.5rem;
     }
