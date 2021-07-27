@@ -32,9 +32,16 @@ const ReservationModel = new Mongoose.Schema({
             type : Boolean,
             default: false
         }
+    },
+    state : {
+        type : Number,
+        default : 0
+    },
+    reg_date : {
+        type: Date,
+        default : Date.now
     }
 }, {
     versionKey: false
 });
-
 module.exports = Mongoose.model(COLL_NAME, ReservationModel);

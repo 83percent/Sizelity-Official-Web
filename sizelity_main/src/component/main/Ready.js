@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // image
 import Com from '../../contents/image/computer2.png';
 import Phone from '../../contents/image/phone.png';
+import LinkLinear from '../../contents/image/Linkbutton_image_linear.png';
 
 // CSS
 import '../../contents/css/main/Ready.css';
@@ -45,8 +46,7 @@ const Ready = () => {
                 <h1>사이즈리티 서비스를 위한</h1>
                 <h1>준비사항이 있어요.</h1>
                 <div>
-                    <p>여러분의 쇼핑몰에서 고객님들이 사이즈리티 서비스를</p>
-                    <p>터치한번으로 사용할 수 있는 간단한 방법.</p>
+                    <p>쇼핑몰에 방문한 고객에게 터치한번으로 최적의 사이즈를 선택할 수 있게 하는 아주 간단한 방법.</p>
                 </div>
             </section>
             <section className="nav">
@@ -130,14 +130,21 @@ const Ready = () => {
                     </div>
                     <h1>사이즈리티 링크 버튼.</h1>
                 </div>
-                
+                <div className="explain">
+                    <h2>왜 링크 버튼이 필요한가요?</h2>
+                    <p>사이즈리티는 고객이 지금 보고있는 여러분의 쇼핑몰 상품을 자동으로 식별해서 서비스를 제공해요.</p>
+                    <p>위 기능을 위해서는 여러분의 쇼핑몰 상품 상세보기 화면에서 고객이 사이즈리티로 이동하는 버튼이 필요해요.</p>
+                    <p>단순히 사이즈리티의 주소가 입력된 링크버튼만 있으면 사이즈리티의 모든 기능을 고객에게 제공할 수 있어요.</p>
+                </div>
                 <div className="link-url-frame">
-                    <h2>아래의 링크로 이동하는 버튼을 쇼핑몰에 만들어주세요.</h2>
-                    <p>생성된 버튼을 누르고 고객님들이 여러분의 상품 사이즈비교를 할거요.</p>
+                    <h2>아래의 링크로 이동하는 버튼을 쇼핑몰 상품 상세보기 화면에 만들어주세요.</h2>
+                    <p>생성된 버튼을 누르고 고객님들이 여러분의 상품 사이즈 비교를 통해 최적의 사이즈를 구매할 거에요.</p>
                     <div className="link-url en">
                         <p>https://www.sizelity.com/compare</p>
                     </div>
+                    <img src={LinkLinear} alt="link_linear"/>
                 </div>
+                
             </section>
             <section className="faq">
                 <div className="title">

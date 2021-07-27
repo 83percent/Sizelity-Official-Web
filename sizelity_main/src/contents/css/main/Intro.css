@@ -2,14 +2,14 @@ main.intro {
     
 }
 main.intro > .top {
-    padding: 20rem 0 10rem 0    ;
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 main.intro > .top > h1 {
-    font-size: 4.0rem;
+    font-size: 5.0rem;
     font-weight: 700;
 
 }
@@ -21,12 +21,38 @@ main.intro > .top > div {
 }
 
 /*
-    Content
+Content
 */
-main.intro > section.content {
+
+main.intro > section.content.row {
     display: flex;
-    
-    padding: 5rem 0;
+    justify-content: center;
+    align-items: center;
+}
+main.intro > section.content.col {
+    display: flex;
+    flex-direction: column;
+}
+main.intro > section.content > .title {
+
+}
+main.intro > section.content > .title > i {
+    font-size: 8.0rem;
+    color: #00000080;
+    margin-bottom: 0.5rem;
+}
+main.intro > section.content > .title > h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+main.intro > section.content > .title > h1 > strong {
+    font-weight: 700;
+    color: #00966B;
+}
+main.intro > section.content > .title > p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.5;
 }
 main.intro > section.content > div {
     display: flex;
@@ -35,8 +61,173 @@ main.intro > section.content > div {
     justify-content: center;
     flex-grow: 1;
 }
+
+main.intro > section.content.row > div {
+    width: 50%;
+}
+main.intro > section.content.row > div.left {
+    display: flex;
+    align-items: flex-end;
+}
+main.intro > section.content.row > div.right {
+    display: flex;
+    align-items: flex-start;
+}
+main.intro > section.content.row .title > h1 {
+    font-size: 3.0rem;
+}
+main.intro > section.content.row .title > p {
+    font-size: 1.2rem;
+}
+main.intro > section.content.row .title > p:first-of-type {
+    margin-top: 1rem;
+}
+main.intro > section.content.row > .image {
+
+}
+main.intro > section.content.row > .image > img {
+    min-width: 30rem;
+}
+main.intro > section.price-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 6rem 0;
+}
+main.intro > section.price-frame > h1 {
+    font-size: 2.5rem;
+}
+main.intro > section.price-frame > div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #00966B;
+}
+main.intro > section.price-frame > div > h1 {
+    font-size: 10.3rem;
+    
+}
+main.intro > section.price-frame > div > p {
+    font-size: 2.3rem;
+    position: relative;
+    top: -1.5rem;
+    font-weight: 600;
+}
+main.intro > section.price-frame > a {
+    margin-top: 1rem;
+    color: #06c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+main.intro > section.price-frame > a > p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+main.intro > section.price-frame > a > i {
+    position: relative;
+    top: -1px;
+}
+main.intro > section.price-frame > a:hover > p {
+    text-decoration: underline;
+}
 main.intro > section.icon-design {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 5rem 0;
+}
+main.intro > section.icon-design div {
+    margin-bottom: 2rem;
+}
+main.intro > section.icon-design h1 {
+    font-size: 3.5rem;
+}
+main.intro > section.icon-design p {
+    font-size: 1.2rem;
+}
+main.intro > section.icon-design img {
+    width: 100%;
+}
+main.intro > section.all_compare {
+    margin: 5rem 0;
+}
+main.intro > section.all_compare img {
+    width: 45rem;
+    margin-left: 3rem;
+}
+main.intro > section.link {
+    margin: 8rem 0;
+}
+main.intro > section.link img {
+    width: 58rem;
+}
+main.intro > section.closet img {
+    width: 42rem;
+}
+main.intro > section.compare img {
+    width: 42rem;
+}
+/*
+    faq
+*/
+main.intro > .faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 0 5rem 0;
+}
+main.intro > .faq > h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+main.intro > .faq > ul {
+    width: 50rem;
+}
+main.intro > .faq li {
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+}
+main.intro > .faq li > .question {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+main.intro > .faq li > .question > h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-grow: 1;
+}
+main.intro > .faq li > .question > i {
+    font-size: 2.2rem;
+    transition: transform;
+    transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+main.intro > .faq li.on > .question > i {
+    transform: rotate(180deg);
+    
+}
+main.intro > .faq li > .question:hover, main.intro > .faq li.on > .question {
+    color: #00966B;
+}
+main.intro > .faq li > .answer {
+    height: 0;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+main.intro > .faq li.on > .answer {
+    height: 5rem;
+}
+main.intro > .faq li > .answer > p {
+    font-size: 1.1rem;
 }

@@ -17,6 +17,9 @@ const Reservation = ({history}) => {
 
     // Ref
     const errorFrame = useRef(null);
+    const serviceBtn = useRef(null);
+    const personalBtn = useRef(null);
+    const promotionBtn = useRef(null);
     const data = useRef({
         domain : undefined,
         name : '',
@@ -37,6 +40,7 @@ const Reservation = ({history}) => {
             target.parentElement.classList.toggle('check', target.checked)
         }, // checkToogle
         send : async function() {
+            console.log(data.current)
             if(!this.checkData()) {return;}
             await axios({
                 method : 'POST',
@@ -129,6 +133,29 @@ const Reservation = ({history}) => {
             errorFrame.current.innerText = _text;
             if(!errorFrame.current.classList.contains('active')) errorFrame.current.classList.add('active');
         }, // toggleError()
+        allToggle : function(value) {
+            if(value) {
+                serviceBtn.current.checked = true;
+                this.checkToogle(serviceBtn.current);
+                personalBtn.current.checked = true;
+                this.checkToogle(personalBtn.current);
+                promotionBtn.current.checked = true;
+                this.checkToogle(promotionBtn.current);
+                data.current.privacy.service = true;
+                data.current.privacy.personal = true;
+                data.current.privacy.promotion = true;
+            } else {
+                serviceBtn.current.checked = false;
+                this.checkToogle(serviceBtn.current);
+                personalBtn.current.checked = false;
+                this.checkToogle(personalBtn.current);
+                promotionBtn.current.checked = false;
+                this.checkToogle(promotionBtn.current);
+                data.current.privacy.service = false;
+                data.current.privacy.personal = false;
+                data.current.privacy.promotion = false;
+            }
+        }
     }   
     return (
         <main className="reservation">
@@ -160,7 +187,7 @@ const Reservation = ({history}) => {
                                 <p>연락가능한 연락처</p>
                                 <input type="number" placeholder="010XXXXXXXX" onChange={(e) => {
                                     data.current.tel = e.target.value;
-                                }}/>
+                                }}/>    
                             </label>
                         </li>
                         <li>
@@ -173,6 +200,17 @@ const Reservation = ({history}) => {
                         </li>
                     </ul>
                     <ul className="checklist">
+                        <li style={{fontSize:"1.2rem",marginBottom:"1rem", paddingBottom: "1rem", paddingRight: "4rem",borderBottom: "2px solid #ccc"}}>
+                            <label>
+                                <i className="material-icons">check</i>
+                                <p>전체 동의</p>
+                                <input type="checkbox" onChange={(e) => {
+                                    event.checkToogle(e.target);
+                                    event.allToggle(e.target.checked);
+                                    data.current.privacy.service = e.target.checked;    
+                                }}/>
+                            </label>
+                        </li>
                         <li>
                             <label>
                                 <i className="material-icons">check</i>
@@ -181,7 +219,7 @@ const Reservation = ({history}) => {
                                 <input type="checkbox" onChange={(e) => {
                                     event.checkToogle(e.target);
                                     data.current.privacy.service = e.target.checked;    
-                                }}/>
+                                }} ref={serviceBtn}/>
                             </label>
                         </li>
                         <li>
@@ -192,7 +230,7 @@ const Reservation = ({history}) => {
                                 <input type="checkbox" onChange={(e) => {
                                     event.checkToogle(e.target);
                                     data.current.privacy.personal = e.target.checked;
-                                }}/>
+                                }} ref={personalBtn}/>
                             </label>
                         </li>
                         <li>
@@ -202,7 +240,7 @@ const Reservation = ({history}) => {
                                 <input type="checkbox" onChange={(e) => {
                                     event.checkToogle(e.target);
                                     data.current.privacy.promotion = e.target.checked;
-                                }}/>
+                                }} ref={promotionBtn}/>
                             </label>
                         </li>
                     </ul>
@@ -210,6 +248,10 @@ const Reservation = ({history}) => {
                     <h4 ref={errorFrame}>Error</h4>
                     <Link to="/" >
                         <p>사이즈리티 더 알아보기</p>
+                        <i className="material-icons">chevron_right</i>
+                    </Link>
+                    <Link to="/ready"  style={{marginTop: "6px"}}>
+                        <p>사이즈리티 쇼핑몰 적용 방법</p>
                         <i className="material-icons">chevron_right</i>
                     </Link>
                 </div>

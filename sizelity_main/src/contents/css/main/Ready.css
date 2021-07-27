@@ -155,8 +155,26 @@ main.ready > section > div.title > .icon-frame > i {
 /*
     link
 */
+
 main.ready > section.link > .title {
-    padding-bottom: 1rem;
+    padding-bottom: 0;
+}
+main.ready > section.link h2 {
+    font-size: 2.4rem;
+}
+main.ready > section.link p:first-of-type {
+    margin-top: 0.5rem;
+}
+main.ready > section.link p {
+    font-size: 1.2rem;
+    color: #00000090;
+    font-weight: 500;
+}
+main.ready > section.link > .explain {
+    text-align: center;
+}
+main.ready > section.link > div {
+    padding: 5rem 0;
 }
 main.ready > section.link > .link-url-frame {
     display: flex;
@@ -164,26 +182,20 @@ main.ready > section.link > .link-url-frame {
     align-items: center;
     justify-content: center;
 }
-main.ready > section.link > .link-url-frame > h2 {
-    font-size: 2.1rem;
-}
-main.ready > section.link > .link-url-frame > p {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #00000090;
-}
 main.ready > section.link > .link-url-frame > .link-url {
     padding: 1rem 7%;
     text-align: center;
     border: 2px solid #ccc;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border-radius: 12px;
 }
 main.ready > section.link > .link-url-frame > .link-url > p {
     font-size: 1.2rem;
     font-weight: 600;
 }
-
+main.ready > section.link > .link-url-frame > img {
+    width: 100%;
+}
 /*
     FAQ
 */
