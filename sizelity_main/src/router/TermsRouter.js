@@ -19,7 +19,6 @@ const TermsRouter = ({match}) => {
         )
     } else {
         const _t = Terms[match.params.cate];
-        console.log(_t.inner)
         return (
             <article className="terms">
                 <header>
@@ -36,8 +35,6 @@ const TermsRouter = ({match}) => {
                             <section key={i1}>
                                 {
                                     Object.entries(inner).map((element, i2) => {
-                                        console.log(element);
-
                                         switch(element[0]) {
                                             case 'title' : {
                                                 return (

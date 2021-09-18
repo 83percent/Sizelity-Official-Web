@@ -25,7 +25,6 @@ const Reservation = ({history}) => {
         privacy : {
             service : false,
             personal : false,
-            promotion : false
         }
     });
 
