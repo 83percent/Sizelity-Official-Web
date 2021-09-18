@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 
 // image
-import Com from '../../contents/image/computer2.png';
+import ShopAdminImage from '../../contents/image/shop_admin.png';
+import ProductAddImage from '../../contents/image/product_add.png';
 import LinkLinear from '../../contents/image/Linkbutton_image_linear.png';
 
 // CSS
@@ -104,7 +105,7 @@ const Ready = () => {
                             
                         </div>
                         <div className="left-image">
-                            <img src={Com} alt="computer" />
+                            <img src={ShopAdminImage} alt="computer" />
                         </div>
                     </li>
                     <li>
@@ -117,7 +118,7 @@ const Ready = () => {
                             </div>  
                         </div>
                         <div className="left-image">
-                            <img src={Com} alt="computer" />
+                            <img src={ProductAddImage} alt="computer" />
                         </div>
                     </li>
                 </ul>
