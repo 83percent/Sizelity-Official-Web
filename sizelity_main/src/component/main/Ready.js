@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 
 // image
 import Com from '../../contents/image/computer2.png';
-import Phone from '../../contents/image/phone.png';
 import LinkLinear from '../../contents/image/Linkbutton_image_linear.png';
 
 // CSS
@@ -17,6 +16,7 @@ const Ready = () => {
         scrollMove : function(type) {
             switch(type) {
                 case 'product' : {
+                    console.log(productWrapper.current.getBoundingClientRect().top)
                     window.scrollTo(0, productWrapper.current.getBoundingClientRect().top);
                     break;
                 }
@@ -43,10 +43,9 @@ const Ready = () => {
     return (
         <main className="ready">
             <section className="top">
-                <h1>사이즈리티 서비스를 위한</h1>
-                <h1>준비사항이 있어요.</h1>
+                <h1>사이즈리티 서비스를 위한 준비사항이 있어요.</h1>
                 <div>
-                    <p>쇼핑몰에 방문한 고객에게 터치한번으로 최적의 사이즈를 선택할 수 있게 하는 아주 간단한 방법.</p>
+                    <p>쇼핑몰에 방문한 고객에게 터치한번으로 최적의 사이즈를 선택할 수 있게 하는 간단한 방법.</p>
                 </div>
             </section>
             <section className="nav">
@@ -132,16 +131,13 @@ const Ready = () => {
                 </div>
                 <div className="explain">
                     <h2>왜 링크 버튼이 필요한가요?</h2>
-                    <p>사이즈리티는 고객이 지금 보고있는 여러분의 쇼핑몰 상품을 자동으로 식별해서 서비스를 제공해요.</p>
-                    <p>위 기능을 위해서는 여러분의 쇼핑몰 상품 상세보기 화면에서 고객이 사이즈리티로 이동하는 버튼이 필요해요.</p>
-                    <p>단순히 사이즈리티의 주소가 입력된 링크버튼만 있으면 사이즈리티의 모든 기능을 고객에게 제공할 수 있어요.</p>
+                    <p>쇼핑 중 바로 사이즈 비교를 할 수 있게 하기 위해서는 링크버튼이 필요해요.</p>
+                    <p>또한 링크 버튼은 고객이 지금 보고있는 여러분의 쇼핑몰 상품을 자동으로 식별해서 사이즈 비교를 제공해요.</p>
                 </div>
                 <div className="link-url-frame">
-                    <h2>아래의 링크로 이동하는 버튼을 쇼핑몰 상품 상세보기 화면에 만들어주세요.</h2>
-                    <p>생성된 버튼을 누르고 고객님들이 여러분의 상품 사이즈 비교를 통해 최적의 사이즈를 구매할 거에요.</p>
-                    <div className="link-url en">
-                        <p>https://www.sizelity.com/compare</p>
-                    </div>
+                    <h2>'자동 링크 생성 모듈'을 상품 상세보기에 추가해주세요.</h2>
+                    <p>어떤 위치, 방식 모두 상관없어요. 여러분의 쇼핑몰에 자유롭게 만들어보세요.</p>
+                    <p>모듈을 추가할지 몰라도 괜찮아요. 언제든지 도와드릴게요.</p>
                     <img src={LinkLinear} alt="link_linear"/>
                 </div>
                 
@@ -157,7 +153,17 @@ const Ready = () => {
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>사전등록 하셨나요? 현재 서비스 오픈 전 입니다. 8월 중 서비스 오픈 전, 사전등록 하신 이메일로 관리자 링크를 보내드립니다.</p>
+                            <p>사전등록 하셨나요? 현재 서비스 오픈 전 입니다. 10월 중 서비스 오픈 전, 사전등록 하신 이메일로 관리자 링크를 보내드립니다.</p>
+                        </div>
+                    </li>
+                    <li onClick={(e) => event.faqToggle(e.target)}>
+                        <div className="question">
+                            <h3>'상품 상세보기에 추가...'가 무슨말이에요?</h3>
+                            <i className="material-icons">keyboard_arrow_down</i>
+                        </div>
+                        <div className="answer">
+                            <p>사이즈리티 기능이 작동하려면 특정 상품 상세보기 화면에서 버튼을 눌러야지 기능을 지원합니다.</p>
+                            <p>그러므로 굳이 상세보기 화면을 제외한 다른 곳에서 링크 버튼이 노출될 필요는 없습니다.</p>
                         </div>
                     </li>
                     <li onClick={(e) => event.faqToggle(e.target)}>
@@ -166,7 +172,17 @@ const Ready = () => {
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>저희 사이즈리티는 설치 없는 서비스입니다. 업주님의 쇼핑몰에서 쇼핑하는 고객님들이 쇼핑 중 터치 또는 클릭 한번으로 손쉽게 지금 보는 상품의 사이즈 비교를 지원하기 위해서 필요합니다.</p>
+                            <p>여러분의 쇼핑몰에서 고객이 쇼핑 중 다른 절차 없이 한번의 클릭으로 사이즈비교를 제공하기 위해서는 사이즈리티로 이동하는 링크가 꼭 필요해요.</p>
+                        </div>
+                    </li>
+                    <li onClick={(e) => event.faqToggle(e.target)}>
+                        <div className="question">
+                            <h3>링크 버튼이 없으면 이용할 수 없나요?</h3>
+                            <i className="material-icons">keyboard_arrow_down</i>
+                        </div>
+                        <div className="answer">
+                            <p>아닙니다. 고객이 직접 여러분의 상품 주소를 사이즈리티에 입력을 통해서도 사이즈비교를 제공합니다.</p>
+                            <p>다만, 고객의 사이즈비교를 클릭 한번으로 제공하기 위해서는 필요합니다.</p>
                         </div>
                     </li>
                     <li onClick={(e) => event.faqToggle(e.target)}>
@@ -180,23 +196,13 @@ const Ready = () => {
                     </li>
                     <li onClick={(e) => event.faqToggle(e.target)}>
                         <div className="question">
-                            <h3>링크 버튼을 만들 줄 몰라요.</h3>
+                            <h3>모듈을 추가 하는 방법을 몰라요.</h3>
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>죄송합니다. 너무 다양한 쇼핑몰 운영솔루션으로 인해, 구체적인 방법을 안내해드리기 어렵습니다.</p>
-                            <p>하지만, 사용하시는 운영 솔루션 업체에 "쇼핑몰 오른쪽 하단에 고정되는 링크 버튼" 과 관련된 문의를 하시면됩니다.</p>
-                            <p>(스마트 스토어를 제외한 모든 운영솔루션에서 해당 기능 지원 중)</p>
-                        </div>
-                    </li>
-                    <li onClick={(e) => event.faqToggle(e.target)}>
-                        <div className="question">
-                            <h3>'상품 상세보기에 링크버튼을 배치...'가 무슨말이에요?</h3>
-                            <i className="material-icons">keyboard_arrow_down</i>
-                        </div>
-                        <div className="answer">
-                            <p>사이즈리티 기능이 작동하려면 하나의 상품, 특정 상품 상세보기 화면에서 버튼을 눌러야지 기능을 지원합니다.</p>
-                            <p>그러므로 굳이 상세보기 화면을 제외한 다른 곳에서 링크 버튼이 노출될 필요는 없습니다.</p>
+                            <p>사이즈리티 서비스 등록을 진행한 뒤 제공되는 이메일을 통해 모듈 추가 방법을 제공하고 있습니다.</p>
+                            <p>그럼에도 어려움이 있다면 언제든지 도와드릴게요.</p>
+                            <p>(스마트 스토어, 오픈마켓 등 특정 쇼핑몰의 경우 자동연결 모듈을 지원하지 않을 수 있습니다.)</p>
                         </div>
                     </li>
                 </ul>

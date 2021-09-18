@@ -1,6 +1,6 @@
 #wrapper {
-    min-height: 100%;
-    height: 100%;
+    min-height: 100vh;
+    height: 100vh;
 }
 #wrapper > nav {
     width: 100%;
@@ -89,9 +89,6 @@
 /*
     Main
 */
-#wrapper > main.preview {
-    padding-top: 10rem;
-}
 #wrapper > main {
     min-height: 100%;
 }
@@ -210,5 +207,8 @@
         right: 0.5rem;
         padding: 1rem;
         z-index: 999;
+    }
+    #wrapper > footer {
+        padding: 3rem 2rem 2rem 2rem;
     }
 }

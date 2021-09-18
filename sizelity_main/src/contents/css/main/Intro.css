@@ -3,7 +3,7 @@ main.intro {
 }
 main.intro > .top {
     display: flex;
-    height: 100vh;
+    height: 80vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,8 @@ main.intro > .top {
 main.intro > .top > h1 {
     font-size: 5.0rem;
     font-weight: 700;
-
+    text-align: center;
+    padding: 0 1rem;
 }
 main.intro > .top > div {
     text-align: center;
@@ -44,6 +45,7 @@ main.intro > section.content > .title > i {
 main.intro > section.content > .title > h1 {
     font-size: 2.5rem;
     font-weight: 700;
+    text-align: center;
 }
 main.intro > section.content > .title > h1 > strong {
     font-weight: 700;
@@ -98,6 +100,7 @@ main.intro > section.price-frame {
 }
 main.intro > section.price-frame > h1 {
     font-size: 2.5rem;
+    text-align: center;
 }
 main.intro > section.price-frame > div {
     display: flex;
@@ -230,4 +233,62 @@ main.intro > .faq li.on > .answer {
 }
 main.intro > .faq li > .answer > p {
     font-size: 1.1rem;
+}
+
+@media (max-width: 767px) {
+    main.intro > section {
+        width: 100vw;
+        max-width: 100vw;
+        overflow-x: hidden;
+        margin-bottom: 5rem;
+    }
+    main.intro > section.content.row {
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 85vh;
+    }
+    main.intro > section.content.row > div {
+        width: auto;
+    }
+    main.intro > section.content > .image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    main.intro > section.content > .image > img {
+        object-fit: contain;
+        height: 57vh;
+    }
+    main.intro > section.content {
+        position: relative;
+    }
+    main.intro > section.content > div:not(.image) {
+        padding: 0 2rem;
+    }
+    main.intro > section.closet img {
+        width: auto;
+    }
+    main.intro > section.compare img {
+        width: auto;
+    }
+    main.intro > section.content.row > .image > img {
+        width: 90%;
+    }
+    main.intro > section.all_compare img {
+        width: auto;
+        margin-left: 0;
+    }
+
+    main.intro > .faq {
+    }
+    main.intro > .faq > ul{
+        overflow-x: hidden;
+        width: 88vw;
+    }
+    main.intro > .faq li.on > .answer {
+        height: 12rem;
+    }
+    main.intro > section.icon-design img {
+        width: 200%;
+    }
 }

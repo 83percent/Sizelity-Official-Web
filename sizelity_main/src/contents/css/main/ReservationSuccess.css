@@ -11,12 +11,14 @@ main.su > section {
 }
 main.su > section > h1 {
     font-size: 3.7rem;
+    text-align: center;
 }
 main.su > section > div {
     text-align: center;
 }
 main.su > section > div > p {
-    color: #00000090;
+    font-size: 1.1rem;
+    color: #555;
 }
 main.su > section > ul {
     margin-top: 0.7rem;

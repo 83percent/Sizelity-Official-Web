@@ -27,10 +27,6 @@ const ReservationModel = new Mongoose.Schema({
         personal : {
             type: Boolean,
             require: true
-        },
-        promotion : {
-            type : Boolean,
-            default: false
         }
     },
     state : {

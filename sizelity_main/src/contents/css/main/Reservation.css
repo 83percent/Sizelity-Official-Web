@@ -15,16 +15,16 @@ section.reserve-card {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-top: 8rem;
-}
-.reserve-card > .main-title > h1:first-child {
-    padding-right: 1rem;
-    color: #00966B;
+    padding-top: 6rem;
 }
 .reserve-card > .main-title > h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    text-align: center;
+}
+.reserve-card > .main-title > h1 > strong {
+    color: #00966B;
 }
 section.reserve-card > a {
     cursor: pointer;
@@ -47,7 +47,7 @@ section.reserve-card .title-frame > h2 {
     font-size: 1.6rem;
 }
 section.reserve-card .text-frame > p {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 /*
     Reservation Page
@@ -80,7 +80,7 @@ main.reservation > section > .right {
 }
 main.reservation > section > .right > img {
     min-width: 70%;
-    width: 45rem;
+    width: 40rem;
     padding-top: 3rem;
 }
 main.reservation ul.info-input {
@@ -259,5 +259,19 @@ main.reservation > section.top > .left > a:hover > p {
     }
     main.reservation > section.top > .left > h4 {
         font-size: 1.2rem;
+    }
+    /*
+        Card
+    */
+    section.reserve-card .title-frame {
+        padding: 0 2rem;
+        text-align: center;
+    }
+    section.reserve-card .title-frame > h2 {
+        font-size: 1.9rem;
+    }
+    section.reserve-card .text-frame {
+        padding: 0 2rem;
+        text-align: center;
     }
 }

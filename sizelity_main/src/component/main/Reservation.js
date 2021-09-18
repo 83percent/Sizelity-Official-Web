@@ -12,14 +12,11 @@ import {ServerContext} from '../../App';
 import { useContext, useRef } from 'react';
 
 const Reservation = ({history}) => {
-    
-
 
     // Ref
     const errorFrame = useRef(null);
     const serviceBtn = useRef(null);
     const personalBtn = useRef(null);
-    const promotionBtn = useRef(null);
     const data = useRef({
         domain : undefined,
         name : '',
@@ -48,7 +45,6 @@ const Reservation = ({history}) => {
                 data : data.current,
                 timeout : 3500
             }).then((response) => {
-                console.log(response);
                 switch(response.status) {
                     case 200 : {
                         history.push('/main/reservation/success');
@@ -139,21 +135,16 @@ const Reservation = ({history}) => {
                 this.checkToogle(serviceBtn.current);
                 personalBtn.current.checked = true;
                 this.checkToogle(personalBtn.current);
-                promotionBtn.current.checked = true;
-                this.checkToogle(promotionBtn.current);
                 data.current.privacy.service = true;
                 data.current.privacy.personal = true;
-                data.current.privacy.promotion = true;
             } else {
                 serviceBtn.current.checked = false;
                 this.checkToogle(serviceBtn.current);
                 personalBtn.current.checked = false;
                 this.checkToogle(personalBtn.current);
-                promotionBtn.current.checked = false;
-                this.checkToogle(promotionBtn.current);
+                
                 data.current.privacy.service = false;
                 data.current.privacy.personal = false;
-                data.current.privacy.promotion = false;
             }
         }
     }   
@@ -162,7 +153,7 @@ const Reservation = ({history}) => {
             <section className="top">
                 <div className="left">
                     <div className="main-title">
-                        <h1>먼저 만나보는 사이즈리티.</h1>
+                        <h1>사이즈리티</h1>
                         <h1>사전등록 진행중.</h1>
                     </div>
                     <ul className="info-input">
@@ -215,7 +206,7 @@ const Reservation = ({history}) => {
                             <label>
                                 <i className="material-icons">check</i>
                                 <p>사이즈리티 이용약관 동의 (필수)</p>
-                                <Link>내용보기</Link>
+                                <Link to="/terms/service">내용보기</Link>
                                 <input type="checkbox" onChange={(e) => {
                                     event.checkToogle(e.target);
                                     data.current.privacy.service = e.target.checked;    
@@ -226,27 +217,17 @@ const Reservation = ({history}) => {
                             <label>
                                 <i className="material-icons">check</i>
                                 <p>개인정보 수집 및 이용 동의 (필수)</p>
-                                <Link>내용보기</Link>
+                                <Link to="/terms/private">내용보기</Link>
                                 <input type="checkbox" onChange={(e) => {
                                     event.checkToogle(e.target);
                                     data.current.privacy.personal = e.target.checked;
                                 }} ref={personalBtn}/>
                             </label>
                         </li>
-                        <li>
-                            <label>
-                                <i className="material-icons">check</i>
-                                <p>프로모션 정보 수신 동의 (선택)</p>                                
-                                <input type="checkbox" onChange={(e) => {
-                                    event.checkToogle(e.target);
-                                    data.current.privacy.promotion = e.target.checked;
-                                }} ref={promotionBtn}/>
-                            </label>
-                        </li>
                     </ul>
                     <button onClick={() => event.send()}>사전등록</button>
                     <h4 ref={errorFrame}>Error</h4>
-                    <Link to="/" >
+                    <Link to="/intro" >
                         <p>사이즈리티 더 알아보기</p>
                         <i className="material-icons">chevron_right</i>
                     </Link>

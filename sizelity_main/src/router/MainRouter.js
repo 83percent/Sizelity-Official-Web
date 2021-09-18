@@ -20,12 +20,12 @@ const MainRouter = () => {
         window.scrollTo(0,0);
         window.addEventListener('scroll', function() {
             NavFrame.current.classList.remove('on');
-        }, {once:true});    
+        }, {once:true});
     });
     return (
         <div id="wrapper">
             <nav>
-                <div className="logo-frame on" ref={NavFrame}>
+                <div className="logo-frame" ref={NavFrame}>
                     <Link to="/" className="logo">
                         <i className="material-icons">local_offer</i>
                     </Link>

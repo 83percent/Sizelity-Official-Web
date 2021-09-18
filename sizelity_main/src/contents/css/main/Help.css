@@ -114,7 +114,7 @@ main.help > .top > a:hover > p{
     main.help > .top > ul > li {
         border: none;
         border-top: 1px solid #88888880;
-        padding-bottom: 1rem;
+        padding: 1rem;
     }
     main.help > .top > ul > li > h2 {
         margin: 0.5rem 0;

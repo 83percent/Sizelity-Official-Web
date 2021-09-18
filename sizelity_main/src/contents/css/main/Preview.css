@@ -1,6 +1,7 @@
 #wrapper > main.preview {
     padding-top: 10rem;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 #wrapper > main.preview > section.main {
     display: flex;
@@ -21,15 +22,32 @@
     font-size: 4.3rem;
     font-weight: 700;
 }
-#wrapper > main.preview > section.main > div.main-title > div > h1:first-child {
-    margin-right: 1rem;
-}
 #wrapper > main.preview > section.main > div.main-title > p {
     font-size: 1.3rem;
     color: #555555;
     font-weight: 400;
 }
-#wrapper > main.preview > section.main > img {
+#wrapper > main.preview > section.main > .image-frame {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wrapper > main.preview > section.main > .image-frame > img {
     margin-top: 6rem;
-    width: 40rem;   
+    width: 40rem;
+}
+
+@media (max-width: 767px) {
+    #wrapper > main.preview {
+        padding-top: 8rem;
+    }
+    #wrapper > main.preview > section.main > div.main-title > p {
+        padding: 0 2rem;
+    }
+    #wrapper > main.preview > section.main > .image-frame > img {
+        margin-top: 3rem;
+        width: 90%;
+    }
 }

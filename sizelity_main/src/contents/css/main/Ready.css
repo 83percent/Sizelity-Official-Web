@@ -161,6 +161,7 @@ main.ready > section.link > .title {
 }
 main.ready > section.link h2 {
     font-size: 2.4rem;
+    text-align: center;
 }
 main.ready > section.link p:first-of-type {
     margin-top: 0.5rem;
@@ -195,6 +196,7 @@ main.ready > section.link > .link-url-frame > .link-url > p {
 }
 main.ready > section.link > .link-url-frame > img {
     width: 100%;
+    margin-top: 3rem;
 }
 /*
     FAQ
@@ -204,6 +206,7 @@ main.ready > .faq {
     flex-direction: column;
     align-items: center;
     padding: 8rem 0 5rem 0;
+    overflow-x: hidden;
 }
 main.ready > .faq > .title > h1 {
     font-size: 3.5rem;
@@ -261,8 +264,10 @@ main.ready > .faq li > .answer > p {
     Media
 */
 @media (max-width: 767px) {
+    
     main.ready > section.top > h1 {
         font-size: 3.0rem;
+        padding: 0 1rem;
     }
     main.ready > section.nav > ul {
         flex-direction: column;
@@ -294,5 +299,18 @@ main.ready > .faq li > .answer > p {
     }
     main.ready > section.nav > ul > li > button > p {
         top: 0;
+    }
+    main.ready > section.top > div > p {
+        padding: 0 2rem;
+    }
+    main.ready > .faq > ul {
+        width: 90%;
+    }
+    main.ready > .faq li.on > .answer {
+        height: 9rem;
+    }
+    main.ready > section.link p {
+        padding: 0 2rem;
+        text-align: center;
     }
 }
