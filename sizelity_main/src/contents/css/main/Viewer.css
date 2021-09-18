@@ -30,10 +30,11 @@ article.terms > header > div > .logo > i {
 
 article.terms > main {
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-bottom: 5rem;
 }
 article.terms > main > div > div {
     text-align: left;
@@ -45,4 +46,38 @@ article.terms > main > div > div p {
     word-break: keep-all;
     line-height: 1.8rem;
     font-size: 16px;
+}
+article.terms > main > section > h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+article.terms > main > section > p {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+article.terms > main > section > ul, article.terms > main > section > ol {
+    border: 1px solid #dbdbdb;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+article.terms > main > section li {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+article.terms > main > section > ul > li > div {
+    
+}
+article.terms > main > section > ul > li > h3 {
+    color: red;
+}
+article.terms > main > section > ul > li > p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
 }

@@ -19,7 +19,7 @@ const TermsRouter = ({match}) => {
         )
     } else {
         const _t = Terms[match.params.cate];
-        console.log(_t)
+        console.log(_t.inner)
         return (
             <article className="terms">
                 <header>
@@ -32,28 +32,77 @@ const TermsRouter = ({match}) => {
                 </header>
                 <main>
                     {
-                        _t.inner.map((e1, i1) => (
-                            <div key={i1}>
-                                <h2>{e1.title}</h2>
+                        _t.inner.map((inner, i1) => (
+                            <section key={i1}>
                                 {
-                                    e1.list.map((e2, i2) => {
-                                        if(e2.line !== undefined) {
-                                            return (
-                                                <div>
-                                                    <h2>{e2.subTitle}</h2>
-                                                    <p>{e2.line}</p>
-                                                </div>
-                                            )
-                                        } else {
-                                                <>
-                                                    <h2>{e2.subTitle}</h2>
-                                                    
-                                                </>
+                                    Object.entries(inner).map((element, i2) => {
+                                        console.log(element);
+
+                                        switch(element[0]) {
+                                            case 'title' : {
+                                                return (
+                                                    <h2 key={i2}>{element[1]}</h2>
+                                                )
+                                            }
+                                            case 'line' : {
+                                                console.log(element);
+                                                return (
+                                                    <p key={i2}>{element[1]}</p>
+                                                )
+                                            }
+                                            case 'number' : {
+                                                return (
+                                                    <ul key={i2}>
+                                                        {
+                                                            element[1].map((liElement, i3) => {
+                                                                return (
+                                                                    <li key={i3}>
+                                                                        <p>{i3+1}</p>
+                                                                        <div>
+                                                                            <h3>{liElement?.title}</h3>
+                                                                            <p>{liElement?.text}</p>
+                                                                            {
+                                                                                liElement?.list?.split('\n').map((line, i4) => (
+                                                                                    <p key={i4}>{line}</p>
+                                                                                ))
+                                                                            }
+                                                                        </div>
+                                                                        
+                                                                    </li>
+                                                                )
+                                                            })
+                                                        }
+                                                    </ul>
+                                                )
+                                            }
+                                            case 'unnumber' : {
+                                                return (
+                                                    <ol key={i2}>
+                                                        {
+                                                            element[1].map((liElement, i3) => {
+                                                                return (
+                                                                    <li key={i3}>
+                                                                        <div>
+                                                                            <h3>{liElement?.title}</h3>
+                                                                        </div>
+                                                                        <p>{liElement?.text}</p>
+                                                                        {
+                                                                            liElement?.list?.split('\n').map((line, i4) => (
+                                                                                <p key={i4}>{line}</p>
+                                                                            ))
+                                                                        }
+                                                                    </li>
+                                                                )
+                                                            })
+                                                        }
+                                                    </ol>
+                                                )
+                                            }
+                                            default : return null;
                                         }
                                     })
                                 }
-                            </div>
-                            
+                            </section>
                         ))
                     }
                 </main>

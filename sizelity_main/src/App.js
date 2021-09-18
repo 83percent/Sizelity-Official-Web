@@ -17,7 +17,7 @@ import ScrollToTop from "./router/ScrollTop";
 // Context
 export const ServerContext = createContext(null);
 //const __server = 'http://localhost:3002';
-const __server = 'http://server.sizelity.com';
+const __server = 'https://server.sizelity.com';
 
 function App() {
   return (
