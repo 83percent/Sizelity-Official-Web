@@ -1,4 +1,4 @@
-import {Terms} from '../contents/js/Terms';
+import { Terms } from '../contents/js/Terms';
 import '../contents/css/main/Viewer.css';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ const TermsRouter = ({match}) => {
         return (
             <>
                 <header>
-                    <h1></h1>
+                    <h1>준비중입니다.</h1>
                 </header>
                 <main>
     

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 
 // CSS
 import '../../contents/css/main/Help.css';
@@ -21,13 +20,13 @@ const Help = () => {
                     </li>
                     <li className="email">
                         <h2>이메일</h2>
-                        <a herf="mailto:sizelity@naver.com" className="en">
+                        <a href="mailto:sizelity@naver.com" className="en">
                             <p>sizelity@naver.com</p>
                         </a>
                     </li>
                     <li className="chat">
                         <h2>카카오톡</h2>
-                        <a herf="http;//www.sizelity.com">
+                        <a href="http;//www.sizelity.com">
                             <p>채팅 상담</p>
                             <i className="material-icons">chevron_right</i>
                         </a>
