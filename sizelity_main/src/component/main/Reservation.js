@@ -216,7 +216,7 @@ const Reservation = ({history}) => {
                             <label>
                                 <i className="material-icons">check</i>
                                 <p>개인정보 수집 및 이용 동의 (필수)</p>
-                                <Link to="/terms/private">내용보기</Link>
+                                <Link to="/terms/privacy">내용보기</Link>
                                 <input type="checkbox" onChange={(e) => {
                                     event.checkToogle(e.target);
                                     data.current.privacy.personal = e.target.checked;
