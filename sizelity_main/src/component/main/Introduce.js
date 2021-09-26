@@ -114,7 +114,7 @@ const Introduce = () => {
                     <p>서비스 적용 준비사항 알아보기</p>
                     <i className="material-icons">chevron_right</i>
                 </Link>
-                <Link to="/main/reservation">
+                <Link to="/reservation">
                     <p>사전등록 신청하기</p>
                     <i className="material-icons">chevron_right</i>
                 </Link>

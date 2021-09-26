@@ -46,7 +46,7 @@ const Reservation = ({history}) => {
             }).then((response) => {
                 switch(response.status) {
                     case 200 : {
-                        history.push('/main/reservation/success');
+                        history.push('/reservation/success');
                         break;
                     }
                     case 202 : {

@@ -25,7 +25,7 @@ function App() {
         <ScrollToTop />
         <Switch>
             <Route exact path="/terms/:cate" component={TermsRouter} />
-            <Route path={["/","/main"]} component={MainRouter}/>
+            <Route path="/" component={MainRouter}/>
         </Switch>
     </ServerContext.Provider>
   );

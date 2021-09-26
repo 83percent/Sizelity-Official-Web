@@ -27,7 +27,7 @@ const Preview = () => {
                 <div className="main-title">
                     <h1><strong>사전등록</strong> 혜택 받아가세요.</h1>
                 </div>
-                <Link to="/main/reservation">
+                <Link to="/reservation">
                     <p>지금 사전등록 하러가기</p>
                     <i className="material-icons">chevron_right</i>
                 </Link>

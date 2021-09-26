@@ -37,7 +37,7 @@ const MainRouter = () => {
                             <NavLink exact to="/ready">준비사항</NavLink>
                         </li>
                         <li>
-                            <NavLink exact to="/main/reservation">사전등록</NavLink>
+                            <NavLink exact to="/reservation">사전등록</NavLink>
                         </li>
                         <li>
                             <NavLink exact to="/help">고객센터</NavLink>
@@ -55,9 +55,8 @@ const MainRouter = () => {
             </div>
             <Switch>
                 <Route exact path="/" component={Preview} />
-                <Route exact path="/main" component={Preview} />
-                <Route exact path="/main/reservation" component={Reservation} />
-                <Route exact path="/main/reservation/success" component={ReservationSuccess} />
+                <Route exact path="/reservation" component={Reservation} />
+                <Route exact path="/reservation/success" component={ReservationSuccess} />
                 <Route path="/ready" component={Ready} />
                 <Route path="/help" component={Help} />
                 <Route path="/faq" component={FAQ} />
@@ -71,7 +70,7 @@ const MainRouter = () => {
                             <Link to="/notice">공지사항</Link>
                             <Link to="/intro">서비스 소개</Link>
                             <Link to="/ready">준비사항</Link>
-                            <Link to="/main/reservation">사전등록</Link>
+                            <Link to="/reservation">사전등록</Link>
                         </div>
                     </li>
                     <li>
