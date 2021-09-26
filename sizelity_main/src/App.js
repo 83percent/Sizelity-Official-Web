@@ -23,10 +23,11 @@ function App() {
   return (
     <ServerContext.Provider value={__server}>
         <ScrollToTop />
-        <Switch>
+        <MainRouter />
+        {/* <Switch>
             <Route exact path="/terms/:cate" component={TermsRouter} />
             <Route path="/" component={MainRouter}/>
-        </Switch>
+        </Switch> */}
     </ServerContext.Provider>
   );
 }

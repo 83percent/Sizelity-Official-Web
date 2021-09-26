@@ -13,6 +13,7 @@ import Help from '../component/main/Help';
 
 // CSS
 import '../contents/css/main/MainFormat.css';
+import TermsRouter from "./TermsRouter";
 
 const MainRouter = () => {
     const NavFrame = useRef(null);
@@ -61,6 +62,7 @@ const MainRouter = () => {
                 <Route path="/help" component={Help} />
                 <Route path="/faq" component={FAQ} />
                 <Route path="/intro" component={Intro} />
+                <Route exact path="/terms/:cate" component={TermsRouter} />
             </Switch>
             <footer>
                 <ul>
