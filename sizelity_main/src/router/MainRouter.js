@@ -67,7 +67,6 @@ const MainRouter = () => {
                     <li>
                         <h3>서비스</h3>
                         <div>
-                            <Link to="/notice">공지사항</Link>
                             <Link to="/intro">서비스 소개</Link>
                             <Link to="/ready">준비사항</Link>
                             <Link to="/reservation">사전등록</Link>

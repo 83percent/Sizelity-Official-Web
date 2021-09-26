@@ -42,7 +42,6 @@ const TermsRouter = ({match}) => {
                                                 )
                                             }
                                             case 'line' : {
-                                                console.log(element);
                                                 return (
                                                     <p key={i2}>{element[1]}</p>
                                                 )

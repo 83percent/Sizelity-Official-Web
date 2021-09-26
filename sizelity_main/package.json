@@ -24,9 +24,7 @@
   },
   "reactSnap": {
     "include": [
-      "/",
-      "/intro",
-      "/reservation"
+      "/terms"
     ]
   },
   "eslintConfig": {

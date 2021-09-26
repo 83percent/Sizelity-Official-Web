@@ -28,7 +28,7 @@ server.use(cookieSession({
     keys: ['83percent']
 })); 
 server.use(cors({
-    //origin: 'https://www.sizelity.com',
+    //origin: 'https://',
     origin: 'http://localhost:3000',
     methods: ['GET', 'PUT', 'POST', 'DELETE', 'PATCH', 'OPTIONS'],
     credentials: true

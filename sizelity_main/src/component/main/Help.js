@@ -26,7 +26,7 @@ const Help = () => {
                     </li>
                     <li className="chat">
                         <h2>카카오톡</h2>
-                        <a href="http;//www.sizelity.com">
+                        <a href="http://pf.kakao.com/_xfvrYs">
                             <p>채팅 상담</p>
                             <i className="material-icons">chevron_right</i>
                         </a>
