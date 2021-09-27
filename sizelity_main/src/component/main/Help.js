@@ -20,7 +20,7 @@ const Help = () => {
                     </li>
                     <li className="email">
                         <h2>이메일</h2>
-                        <a href="mailto:sizelity@naver.com" className="en">
+                        <a href="mailto:shop@sizelity.com" className="en">
                             <p>sizelity@naver.com</p>
                         </a>
                     </li>

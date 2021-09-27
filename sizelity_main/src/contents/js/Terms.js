@@ -329,7 +329,7 @@ const Terms = {
                     {title: "개인정보 보호책임자"},
                     {title: "성명 :이재훈"},
                     {title: "직책 및 직급 :대표"},
-                    {title: "연락처 :01077382709, hoonni2709@naver.com,"}
+                    {title: "연락처 :01077382709, shop@sizelity.com,"}
                 ],
             },
             {
@@ -344,7 +344,7 @@ const Terms = {
                 unnumber: [
                     {title : "개인정보 열람청구 접수·처리 부서"},
                     {title : "담당자 : 이재훈"},
-                    {title : "연락처 : 01077382709, hoonni2709@naver.com,"},
+                    {title : "연락처 : 01077382709, shop@sizelity.com,"},
                 ]
             },
             {
