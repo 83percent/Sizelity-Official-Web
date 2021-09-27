@@ -193,7 +193,10 @@
     #wrapper > nav > .logo-frame > ul {
         height: 0px;
     }
-    #wrapper > nav > .logo-frame:hover > ul, #wrapper > nav > .logo-frame.on > ul {
+    #wrapper > nav > .logo-frame:hover > ul {
+        height: 0;
+    }
+    #wrapper > nav > .logo-frame.on > ul {
         height: auto;
     }
     #wrapper > nav > .logo-frame > ul > li > a {

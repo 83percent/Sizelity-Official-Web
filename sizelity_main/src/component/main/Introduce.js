@@ -4,7 +4,7 @@ import '../../contents/css/main/Intro.css';
 
 import sampleImage from '../../contents/image/compare.png';
 import FixedIconsLinearImage from '../../contents/image/fixed_icons_linear.png';
-import PhoneBook from '../../contents/image/Phone_NoteBook.png';
+import AutoLink from '../../contents/image/Auto_Link_1.png';
 import MyCloset from '../../contents/image/my_closet.png';
 import AllCompare from '../../contents/image/all_compare.png';
 
@@ -21,107 +21,170 @@ const Introduce = () => {
     return (
         <main className="intro">
             <section className="top">
-                <h1>사이즈 고민 이제 그만.</h1>
+                <h1>사이즈 고민?</h1>
+                <h1>여기서 끝.</h1>
                 <div>
-                    <p>사이즈문제로 교환과 환불이 잦아 고민인 쇼핑몰 여러분</p>
-                    <p>모두 집중.</p>
+                    <p>쇼핑몰 고객 80.2%의 고민, "사이즈 고민"</p>
+                    <p>다른 쇼핑몰에서 구매한 고객의 사이즈 정보,</p>
+                    <p>내 쇼핑몰 상품과 비교하고 최고의 사이즈 선택을 도와주세요.</p>
+                    <p>반품률을 줄이고, 고객만족도는 높이고!</p>
                 </div>
             </section>
-            <section className="content col" style={{background : "#f5f5f5", padding: "5rem 0", marginBottom: "3rem"}}>
-                <div className="title">
-                    <i className="material-icons">mood_bad</i>
-                    <h1>"도대체 나는 무슨 사이즈를 사야하는거야?"</h1>
-                    <p>쇼핑몰 의류 구매시 80.2%가 불편해 하는 문제.</p>
+            <section className="message" style={{padding: "2rem 0", marginBottom: "3rem"}}>
+                <div className="center">
+                    <p>문의 내용</p>
+                    <p>(어제), 오전 10:24</p>
                 </div>
-            </section>
-            <section className="content row link">
-                <div className="left image">
-                    <img src={PhoneBook} alt="closet"/>
+                <div className="receive">
+                    <div>
+                        <p>사이즈 문의합니다.</p>
+                        <p>키 163에 56kg 인데, 저한테 맞을까요?</p>
+                    </div>
+                    <div>
+                        <p>제가 평소에 M 사이즈를 입긴하는데요.</p>
+                        <p>저번에 다른 쇼핑몰에서 옷 주문했을때, M사이즈가 안맞더라고요.</p>
+                    </div>
                 </div>
-                <div className="right" >
-                    <div className="title">
-                        <h1>터치한번으로</h1>
-                        <h1>사이즈 비교 서비스.</h1>
-                        <p>사이즈리티 사이즈비교 서비스는 쇼핑중인 고객님이</p>
-                        <p>쇼핑몰에 배치된 버튼을 누르는 것만으로 사용할 수 있어요.</p>
-                        <p>그렇다면, 쇼핑몰에 링크버튼이 필요하겠죠?</p>
+                <div className="send">
+                    <div>
+                        <p>문의 감사합니다.</p>
+                        <p>문의 주신 상품은 탄력성이 우수하기 때문에</p>
+                        <p>평소 M 사이즈를 입었다면, M 사이즈 주문 시</p>
+                        <p>충분히 맞을 것 같습니다.</p>
+                    </div>
+                </div>
+                <div className="center">
+                    <p>(오늘), 오후 04:57</p>
+                </div>
+                <div className="receive">
+                    <div>
+                        <p>배송왔는데... 안맞아요;;</p>
+                        <p>반품... 보낼게요...</p>
+                    </div>
+                </div>
+                <div className="send">
+                    <div>
+                        <p>아 . . .</p>
                     </div>
                 </div>
             </section>
-            <section className="content row closet">
-                <div className="left">
-                    <div className="title">
+            <section className="s1">
+                <div className="center-title">
+                    <h1>고객의 선택,</h1>
+                    <h1>저희가 도와드릴게요.</h1>
+                </div>
+                <div className="big_logo">
+                    <div>
+                        <i className="material-icons">sell</i>
+                        <h2>SIZELITY</h2>
+                    </div>
+                </div>
+            </section>
+            <ul className="list">
+                <li className="center">
+                    <h1>사이즈리티는 무엇을 할까요?</h1>
+                    <p>사이즈리티는 고객이 이전 구매했던 옷을 담아 놓을 수 있는 옷장을 제공해요.</p>
+                    <p>옷장의 옷은 언제든지 꺼내서 현재 보고있는 상품과 비교할 수 있죠.</p>
+                    <p>그것도 모든 쇼핑몰에서 어떤 상품이든.</p>
+                </li>
+                <li className="row">
+                    <div>
                         <h1>모든 내 옷을 손안에</h1>
                         <h1>내 손안의 옷장.</h1>
-                        <p>자신의 옷과 비교를 하기 위해 사용자의 옷장을 만들어 옷을 보관해요.</p>
-                        <p>비교할 나의 옷을 옷장에서 선택하여 사이즈비교를 할 수 있어요.</p>
+                        <p>고객이 '언제, 어디서, 무엇을, 어떻게' 구매했는지 전혀 중요하지 않아요.</p>
+                        <p>구매했던 옷의 정보를 모두 담을 수 있는 내 손안에 옷장.</p>
+                        <p>언제든지 옷을 꺼내어 현재 보고있는 상품의 사이즈와 비교해 고객에게 맞는 사이즈를 주문할 수 있어요.</p>
                     </div>
-                </div>
-                <div className="right image">
-                    <img src={MyCloset} alt="closet"/>
-                </div>
-            </section>
-            
-            <section className="content row compare">
-                <div className="left image">
-                    <img src={sampleImage} alt="closet"/>
-                </div>
-                <div className="right">
-                    <div className="title">
+                    <div className="image-frame">
+                        <img src={MyCloset} className="s2" alt="내 손안의 옷장"/>
+                    </div>
+                </li>
+                <li className="row">
+                    <div className="stick image-frame">
+                        <img className="s1" src={AllCompare} alt="쇼핑몰간 경계없이 모두 비교"/>
+                    </div>
+                    <div>
+                        <h1>다른 쇼핑몰에서 산 옷?</h1>
+                        <h1>무엇이 중요헌디?</h1>
+                        <p>쇼핑몰간 경계없이, 고객의 옷장안에 들어있는 옷이라면 전부다.</p>
+                        <p>고객이 다른 쇼핑몰에서 산 옷을 내 쇼핑몰 상품과 비교.</p>
+                        <p>어떻게? 터치 한번으로.</p>
+                    </div>
+                    
+                </li>
+                <li className="row">
+                    <div>
+                        <h1>터치 한번으로</h1>
+                        <h1>고객의 옷과 사이즈비교.</h1>
+                        <p>판매중인 상품과 고객의 옷장을 터치한번으로 연결하는 방법.</p>
+                        <p>1. 상세보기 화면에 사이즈리티로 이동하는 버튼 추가</p>
+                        <p>그리고, 끝</p>
+                        <p>터치한번으로 만족도는 높이고, 반품-교환은 줄이고 고객에게 최고의 경험을 선사해주세요.</p>
+                    </div>
+                    <div className="image-frame">
+                        <img className="s1" src={AutoLink} alt="터치 한번으로 만나는 사이즈 비교" />
+                    </div>
+                </li>
+                <li className="row">
+                    <div className="image-frame">
+                        <img className="s2" src={sampleImage} alt="한 눈에 비교"/>
+                    </div>
+                    <div>
                         <h1>한 눈에 알 수 있는</h1>
-                        <h1>쇼핑몰 옷과의 차이.</h1>
-                        <p>여러분의 상품 사이즈 정보를 고객에게 쉽게 알려주세요.</p>
-                        <p>고객의 옷과 비교하여 부위별 사이즈 차이를 쉽게 알 수 있어요.</p>
+                        <h1>사이즈 차이.</h1>
+                        <p>당연하지만, 고객은 자신에게 맞는 사이즈를 찾아요.</p>
+                        <p>그렇다면 무슨 사이즈를 구매하면 이 전에 샀던 사이즈와 유사한지 알려줘볼까요?</p>
+                        <p>고객의 실제 옷이 판매중인 옷의 사이즈 중 어디쯤 위치하는지 보여주고, 사이즈 정보를 고객에게 쉽게 알려주세요.</p>
                     </div>
+                </li>
+            </ul>
+            <article className="etc">
+                <div>
+                    <h1>내 쇼핑몰에 진행중인 이벤트.</h1>
+                    <h1>모두 알아야지.</h1>
+                    <p>사실 쇼핑몰은 365일 이벤트 중.</p>
+                    <p>사이즈리티는 혜택을 모아볼 수 있는 기능을 제공하고있어요.</p>
+                    <p>내 쇼핑몰에서 진행하는 다양한 혜택과 이벤트를 고객에게 알려보세요!</p>
                 </div>
-            </section>
-            <section className="content row all_compare">
-                <div className="left">
-                    <div className="title">
-                        <h1>언제, 어디서나</h1>
-                        <h1>쇼핑몰간 경계없이.</h1>
-                        <p>고객이 어느 쇼핑몰에서 옷을 비교하든 상관없어요.</p>
-                        <p>여러분들이 등록한 상품의 사이즈 정보가</p>
-                        <p>사이즈리티를 통해 공유되기에 고객은 쇼핑몰간 제약없이</p>
-                        <p>다른 쇼핑몰에서 산 옷도 여러분의 쇼핑몰 상품과 비교가 가능하죠.</p>
-                    </div>
+                <div>
+                    <h1>고객의 옷장을 연결과 다양한 방법.</h1>
+                    <p>꼭 정식 쇼핑몰이 아니더라도 블로그, SNS, SMS 등 다양한 방법으로 사이즈비교 서비스를 고객에게 제공할 수 있어요.</p>
+                    <p>내 상품과 사이즈 비교를 할 수 있는 링크카드, 링크 주소, QR코드를 자동으로 생성하여 원하는 곳에 붙여넣는 것만으로 충분해요.</p>
                 </div>
-                <div className="right image">
-                    <img src={AllCompare} alt="closet"/>
-                </div>
-            </section>
+            </article>
             <section className="icon-design">
                 <div>
-                    <h1>쇼핑몰에 자연스럽게 녹아드는</h1>
-                    <h1>사이즈리티.</h1>
-                    <p>사이즈리티를 사용하기 위해서는 링크버튼이 필요해요.</p>
-                    <p>여러분의 쇼핑몰 디자인에 맡게 사이즈리티를 적용해보세요.</p>
-                    <p>정해진 방식 없이 사이즈리티로 이동하는 링크버튼에 아이콘 하나만 있으면 OK</p>
+                    <h1>당신의 쇼핑몰에 어울리는</h1>
+                    <h1>사이즈리티 버튼을 직접.</h1>
+                    <p>쇼핑몰은 <strong style={{backgroundColor: "#FF416C"}}>핑크색</strong> 사이즈비교 버튼은 <strong style={{backgroundColor: "#00966B"}}>초록색</strong> 잘 안어울리는데...?</p>
+                    <p>내 쇼핑몰에 어울리는 색상을 골라 만드는 사이즈비교 버튼</p>
                 </div>
                 <div className="image">
                     <img src={FixedIconsLinearImage} alt="linear_icons"/>
                 </div>
             </section>
-            <section className="price-frame">
-                <h1>입점료? 설치? 그게뭐야?</h1>
-                <h1>서비스 사용요금이 무려</h1>
-                <div>
-                    <h1 className="en">0</h1>
-                    <p>원</p>
+            <article className="price-wrapper">
+                <h1>서비스 이용요금</h1>
+                <div className="price before">
+                    <p>월 49,900원</p>
                 </div>
-                <h1>사이즈리티를 무료로 적용해보세요.</h1>
-                <Link to="/ready">
-                    <p>서비스 적용 준비사항 알아보기</p>
-                    <i className="material-icons">chevron_right</i>
-                </Link>
+                <div className="price">
+                    <h2>지금 등록하면 무려,</h2>
+                    <div>
+                        <p>평생</p>
+                        <h3>0</h3>
+                        <p>원</p>
+                    </div>
+                </div>
                 <Link to="/reservation">
-                    <p>사전등록 신청하기</p>
+                    <p>지금 등록하러 가기</p>
                     <i className="material-icons">chevron_right</i>
                 </Link>
-            </section>
+
+            </article>
             <section className="content">
-                <div className="title" style={{paddingTop: "10rem"}}>
-                    <h1 style={{fontSize: "3.5rem"}}>사이즈리티, 쇼핑몰에 날개를 달아줘.</h1>
+                <div className="title" style={{paddingTop: "10rem", textAlign: "center"}}>
+                    <h1 style={{fontSize: "3.1rem"}}>사이즈리티, 쇼핑몰에 날개를 달아줘.</h1>
                 </div>
             </section>
             <section className="faq">
@@ -129,12 +192,11 @@ const Introduce = () => {
                 <ul>
                     <li onClick={(e) => faqToggle(e.target)}>
                         <div className="question">
-                            <h3>사이즈리티를 쇼핑몰에 적용하고싶어요.</h3>
+                            <h3>서비스를 이용하고싶어요.</h3>
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>현재 사전등록 진행중입니다. 사전등록을 진행해주시면 입력하신 이메일을 통해 구체적인 내용이 전달됩니다.</p>
-                            <p>사전등록을 통해 다양한 프리티어 해택을 받아보세요.</p>
+                            <p>현재 사전등록 진행중입니다. 사전등록을 완료해주시면, 입력해주신 연락처 및 이메일을 통해 자세한 절차를 안내드립니다.</p>
                         </div>
                     </li>
                     <li onClick={(e) => faqToggle(e.target)}>
@@ -143,49 +205,41 @@ const Introduce = () => {
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>사이즈리티를 통해 식별이 불가능한 쇼핑몰의 경우 현재 서비스 사용이 불가능합니다.</p>
-                            <p>식별여부는 사전등록을 통해 입력하신 정보를 통해 확인 뒤 이메일을 통해 결과를 전달해드리고 있습니다.</p>
+                            <p>아닙니다. 옷 사이즈 비교가 필요한 곳에서 모두 사용할 수 있어요.</p>
+                            <p>다만, 사이즈리티와 쇼핑몰을 자동으로 연결하는 기능을 사용하기위해서는 독립된 쇼핑몰을 운영해야해요.</p>
+                            <p>독립된 쇼핑몰이 아니더라도, 사이즈리티에서 제공하는 다양한 방식을 통해 고객에게 서비스를 제공할 수 있어요.</p>
                         </div>
                     </li>
                     <li onClick={(e) => faqToggle(e.target)}>
                         <div className="question">
-                            <h3>"입점료", "설치" 가 뭔가요?</h3>
+                            <h3>진짜 서비스 이용요금 0원 맞나요?</h3>
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>타사의 서비스를 이용하게 되면 발생하는 입점료, 서비스 사용을 위한 설치, 설치비, 월 사용요금을 말합니다.</p>
-                            <p>사이즈리티는 제공되는 링크만 추가하면 되는 방식으로 설치, 설치비, 입점료, 월 사용요금이 없습니다.</p>
+                            <p>지금 등록하시면 서비스 이용요금 0원으로 사이즈비교 서비스를 평생 이용할 수 있어요.</p>
+                            <p>기타 입점료, 서버비, 설치비 그런 비용도 전혀 없어요.</p>
+                            <p>과금요소는 광고 개제를 원하는 경우, 광고료를 제외하고 없어요.</p>
                         </div>
                     </li>
                     <li onClick={(e) => faqToggle(e.target)}>
                         <div className="question">
-                            <h3>"내 손안의 옷장"이 뭔가요?</h3>
+                            <h3>쇼핑몰에서 어떻게 사이즈비교를 한다는 거죠?</h3>
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>사이즈리티를 이용하는 소비자 고객에게 지원하는 기능으로</p>
-                            <p>소비자의 이전 구매상품을 쉽게 저장하고 옷 구매시 꺼내어 비교해볼 수 있는 옷장입니다.</p>
+                            <p>쇼핑몰 안에서 사이즈 비교가 이루어지는것이 아닌, 쇼핑몰내 상세보기 화면에 사이즈리티로 이동하는 버튼을 배치하는 것입니다.</p>
+                            <p>고객이 사이즈비교 버튼을 누를 경우 자동으로 상품을 식별하여, 사이즈리티 페이지에서 비교가 이루어집니다.</p>
                         </div>
                     </li>
                     <li onClick={(e) => faqToggle(e.target)}>
                         <div className="question">
-                            <h3>비교하는 화면으로 어떻게 이동하나요?</h3>
+                            <h3>쇼핑몰 운영자는 어떤걸 해야하죠?</h3>
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>사이즈리티 서비스를 적용하는 방법은 쇼핑몰 내에 사이즈리티로 이동하는 링크 버튼을 추가하는 것입니다.</p>
-                            <p>쇼핑몰 운영자님께서 배치하신 링크 버튼을 소비자가 누르면 비교화면으로 넘어가 자동으로 비교가 이루어지게 됩니다.</p>
-                        </div>
-                    </li>
-                    <li onClick={(e) => faqToggle(e.target)}>
-                        <div className="question">
-                            <h3>링크 버튼을 어떻게 배치하는거죠?</h3>
-                            <i className="material-icons">keyboard_arrow_down</i>
-                        </div>
-                        <div className="answer">
-                            <p>링크 버튼의 배치는 쇼핑몰 운영자님의 자율적인 방법으로 추가하시면 됩니다.</p>
-                            <p>쇼핑몰 스크롤과 같이 움직이는 버튼 또는 사이즈 표 근처 등 위치, 디자인의 제약없이 자유롭게 배치하시면 됩니다.</p>
-                            <p>단, 사이즈리티 서비스를 식별할 수 있는 아이콘이 포함되어 있어야하며, 상세보기 페이지에 위치해야합니다.</p>
+                            <p>서비스 가입 후, 제공되는 파트너센터에서 상품들을 등록하시는 것이 전부 입니다.</p>
+                            <p>부가 기능 및 사용 방법은 가입 후 제공되는 사용법 문서에서 확인하실 수 있습니다.</p>
+                            <p>(지금 등록하시면, 초기 서비스 시작을 위한 상품 등록을 모두해드립니다.)</p>
                         </div>
                     </li>
                 </ul>

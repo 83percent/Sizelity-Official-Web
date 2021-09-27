@@ -8,7 +8,7 @@ const Help = () => {
     return (
         <main className="help">
             <section className="top">
-                <div class="icon-wrapper">
+                <div className="icon-wrapper">
                     <div className="icon-frame">
                         <i className="material-icons">support_agent</i>
                     </div>

@@ -230,10 +230,6 @@ const Reservation = ({history}) => {
                         <p>사이즈리티 더 알아보기</p>
                         <i className="material-icons">chevron_right</i>
                     </Link>
-                    <Link to="/ready"  style={{marginTop: "6px"}}>
-                        <p>사이즈리티 쇼핑몰 적용 방법</p>
-                        <i className="material-icons">chevron_right</i>
-                    </Link>
                 </div>
                 <div className="right">
                     <img src={MainImage} alt="main"/>

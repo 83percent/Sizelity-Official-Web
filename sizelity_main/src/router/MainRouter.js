@@ -6,7 +6,6 @@ import { NavLink, Link } from "react-router-dom";
 import Preview from '../component/main/Preview';
 import Reservation from '../component/main/Reservation';
 import ReservationSuccess from '../component/main/ReservationSuccess';
-import Ready from '../component/main/Ready';
 import FAQ from '../component/main/FAQ';
 import Intro from '../component/main/Introduce';
 import Help from '../component/main/Help';
@@ -22,20 +21,20 @@ const MainRouter = () => {
         window.addEventListener('scroll', function() {
             NavFrame.current.classList.remove('on');
         }, {once:true});
+        if(NavFrame.current.classList.contains('on')) {
+            NavFrame.current.classList.remove('on');
+        }
     });
     return (
         <div id="wrapper">
             <nav>
-                <div className="logo-frame" ref={NavFrame}>
+                <div className="logo-frame" ref={NavFrame} onClick={() => NavFrame.current.classList.remove('on')}>
                     <Link to="/" className="logo">
                         <i className="material-icons">local_offer</i>
                     </Link>
                     <ul>
                         <li>
                             <NavLink exact to="/intro">서비스 소개</NavLink>
-                        </li>
-                        <li>
-                            <NavLink exact to="/ready">준비사항</NavLink>
                         </li>
                         <li>
                             <NavLink exact to="/reservation">사전등록</NavLink>
@@ -58,7 +57,6 @@ const MainRouter = () => {
                 <Route exact path="/" component={Preview} />
                 <Route exact path="/reservation" component={Reservation} />
                 <Route exact path="/reservation/success" component={ReservationSuccess} />
-                <Route path="/ready" component={Ready} />
                 <Route path="/help" component={Help} />
                 <Route path="/faq" component={FAQ} />
                 <Route path="/intro" component={Intro} />
@@ -70,7 +68,6 @@ const MainRouter = () => {
                         <h3>서비스</h3>
                         <div>
                             <Link to="/intro">서비스 소개</Link>
-                            <Link to="/ready">준비사항</Link>
                             <Link to="/reservation">사전등록</Link>
                         </div>
                     </li>

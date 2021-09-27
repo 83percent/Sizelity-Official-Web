@@ -1,10 +1,8 @@
 // Module
 import { createContext } from "react";
-import { Switch, Route } from "react-router-dom";
 
 // Router Componnet
 import MainRouter from './router/MainRouter';
-import TermsRouter from './router/TermsRouter';
 
 // Font
 import './contents/fonts/Montserrat_use.css';
@@ -24,10 +22,6 @@ function App() {
     <ServerContext.Provider value={__server}>
         <ScrollToTop />
         <MainRouter />
-        {/* <Switch>
-            <Route exact path="/terms/:cate" component={TermsRouter} />
-            <Route path="/" component={MainRouter}/>
-        </Switch> */}
     </ServerContext.Provider>
   );
 }

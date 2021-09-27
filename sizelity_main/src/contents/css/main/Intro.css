@@ -1,6 +1,4 @@
-main.intro {
-    
-}
+
 main.intro > .top {
     display: flex;
     height: 80vh;
@@ -9,7 +7,7 @@ main.intro > .top {
     justify-content: center;
 }
 main.intro > .top > h1 {
-    font-size: 5.0rem;
+    font-size: 5.5rem;
     font-weight: 700;
     text-align: center;
     padding: 0 1rem;
@@ -20,123 +18,158 @@ main.intro > .top > div {
     font-weight: 500;
     color: #00000090;
 }
-
 /*
-Content
+    message
 */
+main.intro > .message {
 
-main.intro > section.content.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-main.intro > section.content.col {
+main.intro > .message > div {
     display: flex;
     flex-direction: column;
 }
-main.intro > section.content > .title {
-
-}
-main.intro > section.content > .title > i {
-    font-size: 8.0rem;
-    color: #00000080;
-    margin-bottom: 0.5rem;
-}
-main.intro > section.content > .title > h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-}
-main.intro > section.content > .title > h1 > strong {
-    font-weight: 700;
-    color: #00966B;
-}
-main.intro > section.content > .title > p {
-    font-size: 1.2rem;
+main.intro > .message > div > div {
+    font-size: 2.6rem;
     font-weight: 500;
-    opacity: 0.5;
+    padding: 1.2rem 2.6rem;
+    border-radius: 3rem;
+    margin-bottom: 1.5rem;
 }
-main.intro > section.content > div {
-    display: flex;
-    flex-direction: column;
+main.intro > .message > .center {
     align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+    margin-top: 1.5rem;
+    margin-bottom: 2.4rem;
 }
-
-main.intro > section.content.row > div {
-    width: 50%;
+main.intro > .message > .center > p {
+    font-size: 1.9em;
+    color: #555;
+    font-weight: 500;
 }
-main.intro > section.content.row > div.left {
-    display: flex;
-    align-items: flex-end;
-}
-main.intro > section.content.row > div.right {
-    display: flex;
+main.intro > .message > .receive {
+    margin-left: 10%;
+    margin-right: 20%;
     align-items: flex-start;
 }
-main.intro > section.content.row .title > h1 {
-    font-size: 3.0rem;
+main.intro > .message > .receive > div {
+    
+    background-color: #ddd;
 }
-main.intro > section.content.row .title > p {
-    font-size: 1.2rem;
+main.intro > .message > .send {
+    margin-left: 20%;
+    margin-right: 10%;
+    align-items: flex-end;
 }
-main.intro > section.content.row .title > p:first-of-type {
-    margin-top: 1rem;
+main.intro > .message > .send > div {
+    background-color: #06c;
+    color: #fff;
 }
-main.intro > section.content.row > .image {
-
-}
-main.intro > section.content.row > .image > img {
-    min-width: 30rem;
-}
-main.intro > section.price-frame {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #f5f5f5;
-    padding: 6rem 0;
-}
-main.intro > section.price-frame > h1 {
-    font-size: 2.5rem;
+/*
+    menet
+*/
+main.intro > section > .center-title {
     text-align: center;
 }
-main.intro > section.price-frame > div {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    color: #00966B;
+main.intro > section > .center-title > h1 {
+    font-size: 4.8rem;
 }
-main.intro > section.price-frame > div > h1 {
-    font-size: 10.3rem;
+main.intro > .s1 > .big_logo {
+    width: 90vw;
+    padding: 7rem 0;
+    background-color: #00966B;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border-radius: 2rem;
     
 }
-main.intro > section.price-frame > div > p {
-    font-size: 2.3rem;
-    position: relative;
-    top: -1.5rem;
-    font-weight: 600;
+main.intro > .s1 > .big_logo > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
 }
-main.intro > section.price-frame > a {
-    margin-top: 1rem;
-    color: #06c;
+main.intro > .s1 > .big_logo > div > i {
+    font-size: 3.3rem;
+    margin-right: 0.6rem;
+}
+main.intro > .s1 > .big_logo > div > h2 {
+    font-size: 3.1rem;
+}
+
+main.intro > ul {
+    margin: 5rem 10%;  
+    
+}
+main.intro > ul > li {
+    margin-bottom: 3rem;
+}
+main.intro > ul > li.center {
+    text-align: center;
+}
+main.intro > ul > li h1 {
+    font-size: 2.8rem;
+    
+}
+main.intro > ul > li h1:last-of-type {
+    margin-bottom: 0.5rem;
+}
+main.intro > ul > li p {
+    font-size: 1.15rem;
+    color: #555;
+}
+main.intro > ul > li > div:first-of-type {
+    text-align: right;
+}
+main.intro > ul > li > div:last-of-type {
+    text-align: left;
+}
+main.intro > ul > li.row {
+    display: flex;
+    align-items: center;
+}
+main.intro > ul > li.row > div {
+    width: 70%;
+}
+main.intro > ul > li > div.stick {
+    padding-right: 4rem;
+}
+main.intro > ul > li > div > img.s1 {
+    width: 100%;
+    min-width: 20rem;
+}
+main.intro > ul > li > div > img.s2 {
+    width: 77%;
+    min-width: 34rem;
+}
+/*
+    etc row
+*/
+main.intro > .etc {
+    width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    flex-wrap: wrap;
 }
-main.intro > section.price-frame > a > p {
+main.intro > .etc > div {
+    background: #f0f0f0;
+    padding: 2rem;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    width: 42%;
+    min-width: 30rem;
+}
+main.intro > .etc > div > h1 {
+    font-size: 2.2rem;
+}
+main.intro > .etc > div > h1:last-of-type {
+    margin-bottom: 0.5rem;
+}
+main.intro > .etc > div > p {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
 }
-main.intro > section.price-frame > a > i {
-    position: relative;
-    top: -1px;
-}
-main.intro > section.price-frame > a:hover > p {
-    text-decoration: underline;
-}
+/*
+    Icons
+*/
 main.intro > section.icon-design {
     display: flex;
     flex-direction: column;
@@ -151,6 +184,11 @@ main.intro > section.icon-design h1 {
 }
 main.intro > section.icon-design p {
     font-size: 1.2rem;
+}
+main.intro > section.icon-design p > strong {
+    color: #ffffff;
+    border-radius: 2rem;
+    padding: 3px 0.5rem;
 }
 main.intro > section.icon-design img {
     width: 100%;
@@ -173,6 +211,61 @@ main.intro > section.closet img {
 }
 main.intro > section.compare img {
     width: 42rem;
+}
+/*
+    Price
+*/
+main.intro > .price-wrapper {
+    width: 100vw;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+main.intro > .price-wrapper > h1 {
+    font-size: 3.2rem;
+}
+main.intro > .price-wrapper > .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main.intro > .price-wrapper > .price.before > p{
+    text-decoration: line-through;
+}
+main.intro > .price-wrapper > .price p {
+    margin: 0 1rem 0 0.5rem;
+    font-size: 2.0rem;
+}
+main.intro > .price-wrapper > .price > div {
+    display: flex;
+    align-items: center;
+}
+main.intro > .price-wrapper > .price > div > h3 {
+    font-size: 6.0rem;
+    font-weight: 600;
+    color: #00966B;
+}
+main.intro > .price-wrapper > .price > h2 {
+    font-size: 2.0rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+main.intro > .price-wrapper > a {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #0066cc;
+    font-weight: 500;
+    cursor: pointer;
+}
+main.intro > .price-wrapper > a:hover > p {
+    text-decoration: underline;
+}
+main.intro > .price-wrapper > a > i {
+    font-size: 2.0rem;
 }
 /*
     faq
@@ -236,49 +329,84 @@ main.intro > .faq li > .answer > p {
 }
 
 @media (max-width: 767px) {
+    main.intro > section > .center-title > h1 {
+
+    }
+    main.intro > .top > h1 {
+        font-size: 4.3rem;
+    }
+    main.intro > .top > div {
+        margin: 0 1rem;
+    }
     main.intro > section {
         width: 100vw;
         max-width: 100vw;
         overflow-x: hidden;
         margin-bottom: 5rem;
     }
-    main.intro > section.content.row {
-        align-items: flex-start;
-        justify-content: flex-start;
-        height: 85vh;
+    main.intro > section > .center-title > h1 {
+        font-size: 3.4rem;
+        margin: 0 1rem;
     }
-    main.intro > section.content.row > div {
+    main.intro > .s1 > .big_logo {
+        margin-top: 1.5rem;
+    }
+    main.intro > ul {
+        margin: 10rem 1rem;   
+    }
+    main.intro > ul > li {
+        margin-bottom: 12rem;
+    }
+    main.intro > ul > li:last-of-type {
+        margin-bottom: 3rem;
+    }
+    main.intro > ul > li p {
+        font-size: 1.3rem;
+    }
+    main.intro > ul > li.row {
+        flex-direction: column;
+    }
+    main.intro > ul > li.row > div {
+        width: 100%;
+        text-align: center;
+    }
+    main.intro > ul > li.row > div > img.s1 {
+        width: 100%;
+        min-width: 0rem;
+    }
+    main.intro > ul > li.row > div > img.s2 {
+        width: 100%;
+        min-width: 0rem;
+    }
+    main.intro > ul > li.row > div.image-frame {
+        order: 999;
+        padding-top: 3rem;
+    }
+    main.intro > ul > li > div.stick {
+        padding: 0;
+    }
+    main.intro > .etc > div {
+        min-width: 0;
         width: auto;
     }
-    main.intro > section.content > .image {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+    main.intro > section.icon-design div > h1 {
+        margin: 0 1rem;
+        font-size: 2.8rem;
     }
-    main.intro > section.content > .image > img {
-        object-fit: contain;
-        height: 57vh;
+    main.intro > section.icon-design div > h1:last-of-type {
+        margin-bottom: 1rem;
     }
-    main.intro > section.content {
-        position: relative;
+    main.intro > section.icon-design div > p {
+        margin: 0 0.5rem;
+        font-size: 1.35rem;
     }
-    main.intro > section.content > div:not(.image) {
-        padding: 0 2rem;
+    main.intro > .price-wrapper > .price {
+        flex-direction: column;
     }
-    main.intro > section.closet img {
-        width: auto;
+    main.intro > .price-wrapper > .price > h2 {
+        margin-top: 2rem;
+        
     }
-    main.intro > section.compare img {
-        width: auto;
-    }
-    main.intro > section.content.row > .image > img {
-        width: 90%;
-    }
-    main.intro > section.all_compare img {
-        width: auto;
-        margin-left: 0;
-    }
-
     main.intro > .faq {
     }
     main.intro > .faq > ul{
@@ -290,5 +418,27 @@ main.intro > .faq li > .answer > p {
     }
     main.intro > section.icon-design img {
         width: 200%;
+    }
+
+    /*
+        messeage
+    */
+    main.intro > .message > .center {
+        margin-bottom: 1.3rem;
+    }
+    main.intro > .message > .center > p {
+        font-size: 1.1rem;
+    }
+    main.intro > .message > div > div {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 1rem 1.8rem;
+        border-radius: 2rem;
+    }
+    main.intro > .message > .receive {
+        margin-left: 5%;
+    }
+    main.intro > .message > .send {
+        margin-right: 5%
     }
 }
