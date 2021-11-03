@@ -153,7 +153,7 @@ const Reservation = ({history}) => {
                 <div className="left">
                     <div className="main-title">
                         <h1>사이즈리티</h1>
-                        <h1>사전등록 진행중.</h1>
+                        <h1>쇼팡몰 등록 진행중.</h1>
                     </div>
                     <ul className="info-input">
                         <li>

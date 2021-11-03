@@ -26,10 +26,10 @@ const Preview = () => {
             </section>
             <section className="reserve-card">
                 <div className="main-title">
-                    <h1><strong>사전등록</strong> 혜택 받아가세요.</h1>
+                    <h1><strong>쇼핑몰 등록</strong>하고 혜택 받아가세요.</h1>
                 </div>
                 <Link to="/reservation">
-                    <p>지금 사전등록 하러가기</p>
+                    <p>쇼핑몰 등록 하러가기</p>
                     <i className="material-icons">chevron_right</i>
                 </Link>
                 <ul>
@@ -58,7 +58,7 @@ const Preview = () => {
                         <div className="text-frame">
                             <p>사전등록 쇼핑몰을 위해 7일간 무료 광고 게재해드려요.</p>
                             <p>7일간 무료 광고 종료 후, 3개월간 광고비 50% 할인 혜택까지.</p>
-                            <p>추가 혜택으로 10일 까지 무료 광고!</p>
+                            <p>추가 혜택으로 10일 까지 무료 광고!</p>   
                         </div>
                     </li>
                     <li>

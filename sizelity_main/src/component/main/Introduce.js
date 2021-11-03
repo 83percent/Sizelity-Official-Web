@@ -196,7 +196,7 @@ const Introduce = () => {
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>현재 사전등록 진행 중입니다. 사전등록을 완료해주시면, 입력해주신 연락처 및 이메일을 통해 자세한 절차를 안내해 드립니다.</p>
+                            <p>현재 쇼핑몰 등록 진행 중입니다. 쇼핑몰 등록을 완료해주시면, 입력해주신 연락처 및 이메일을 통해 자세한 절차를 안내해 드립니다.</p>
                         </div>
                     </li>
                     <li onClick={(e) => faqToggle(e.target)}>
