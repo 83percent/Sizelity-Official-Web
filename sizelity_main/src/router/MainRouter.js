@@ -9,10 +9,10 @@ import ReservationSuccess from '../component/main/ReservationSuccess';
 import FAQ from '../component/main/FAQ';
 import Intro from '../component/main/Introduce';
 import Help from '../component/main/Help';
+import TermsRouter from "./TermsRouter";
 
 // CSS
 import '../contents/css/main/MainFormat.css';
-import TermsRouter from "./TermsRouter";
 
 const MainRouter = () => {
     const NavFrame = useRef(null);
@@ -37,18 +37,16 @@ const MainRouter = () => {
                             <NavLink exact to="/intro">서비스 소개</NavLink>
                         </li>
                         <li>
-                            <NavLink exact to="/reservation">사전등록</NavLink>
-                        </li>
-                        <li>
-                            <NavLink exact to="/help">고객센터</NavLink>
+                            <NavLink exact to="/reservation">쇼핑몰 등록</NavLink>
                         </li>
                         <li>
                             <NavLink exact to="/faq">자주 묻는 질문</NavLink>
                         </li>
-                        
+                        <li>
+                            <NavLink exact to="/help">고객센터</NavLink>
+                        </li>
                     </ul>
                 </div>
-                <div className="blur-frame"></div>
             </nav>
             <div className="menu-btn" onClick={() => NavFrame.current.classList.toggle('on')}>
                 <i className="material-icons">menu</i>

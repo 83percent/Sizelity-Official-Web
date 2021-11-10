@@ -164,18 +164,7 @@ const Introduce = () => {
                 </div>
             </section>
             <article className="price-wrapper">
-                <h1>서비스 이용요금</h1>
-                <div className="price before">
-                    <p>월 49,900원</p>
-                </div>
-                <div className="price">
-                    <h2>지금 등록하면 무려,</h2>
-                    <div>
-                        <p>평생</p>
-                        <h3>0</h3>
-                        <p>원</p>
-                    </div>
-                </div>
+                <h1>6개월간 무료 체험해보세요.</h1>
                 <Link to="/reservation">
                     <p>지금 등록하러 가기</p>
                     <i className="material-icons">chevron_right</i>
@@ -212,13 +201,13 @@ const Introduce = () => {
                     </li>
                     <li onClick={(e) => faqToggle(e.target)}>
                         <div className="question">
-                            <h3>진짜 서비스 이용요금 0원 맞나요?</h3>
+                            <h3>무료 체험 종료 후, 가격이 얼마인가요?</h3>
                             <i className="material-icons">keyboard_arrow_down</i>
                         </div>
                         <div className="answer">
-                            <p>지금 등록하시면 서비스 이용요금 0원으로 사이즈비교 서비스를 평생 이용할 수 있어요.</p>
-                            <p>기타 입점료, 서버 사용료, 설치비 그런 비용도 전혀 없어요.</p>
-                            <p>과금 요소는 광고 게재를 원하는 경우, 광고료를 제외하고 없어요.</p>
+                            <p>사이즈리티는 고객님의 쇼핑몰에서 사이즈 비교를 사용한 만큼만 결제하면됩니다.</p>
+                            <p>'스탠다드 요금' 기준, 서비스 이용료 월  0원, 월 1,000회 무료 이후 1,000회 / 200원 (1회 / 0.2원) </p>
+                            <p>'프리미엄 요금' 기준, 서비스 이용료 월  100,000원, 월 10,000회 무료 이후 1,000회 / 100원 (1회 / 0.1원) </p>
                         </div>
                     </li>
                     <li onClick={(e) => faqToggle(e.target)}>
@@ -239,7 +228,6 @@ const Introduce = () => {
                         <div className="answer">
                             <p>서비스 가입 후, 제공되는 파트너센터에서 상품들을 등록하시는 것이 전부입니다.</p>
                             <p>부가 기능 및 사용 방법은 가입 후 제공되는 사용법 문서에서 확인하실 수 있습니다.</p>
-                            <p>(지금 등록하시면, 초기 서비스 시작을 위한 상품 등록을 모두 해드립니다.)</p>
                         </div>
                     </li>
                 </ul>

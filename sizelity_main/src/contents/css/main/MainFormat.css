@@ -3,89 +3,52 @@
     height: 100vh;
 }
 #wrapper > nav {
+    background-color: #333;
     width: 100%;
-    position: fixed;
+    position: absolute;
     z-index: 999;
     top: 0;
 }
 #wrapper > nav > .logo-frame {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    z-index: 999;
-    padding-top: 0.9rem;
-    background: rgb(255,255,255, 0.9);
+    align-items: center;
+    padding: 0.7rem 0;
 }
-#wrapper > nav > .logo-frame > .logo {
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    background: #00966B;
+#wrapper > nav > .logo-frame > a {
+    height: 1.6rem;
     cursor: pointer;
 }
-#wrapper > nav > .logo-frame > .logo > i {
-    font-size: 24px;
-    color: #ffffff;
+#wrapper > nav > .logo-frame > a > i {
+    font-size: 1.6rem;
+    color: #fff;
+    opacity: 0.7;
+    transition-duration: 0.3s;
+}
+#wrapper > nav > .logo-frame > a > i:hover {
+    opacity: 1.0;
 }
 #wrapper > nav > .logo-frame > ul {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    height: 0px;
-    transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-}
-#wrapper > nav > .logo-frame:hover > ul, #wrapper > nav > .logo-frame.on > ul {
-    height: 3rem;
+    flex-wrap: nowrap;
+    padding-left: 2rem;
 }
 #wrapper > nav > .logo-frame > ul > li {
-    padding: 1rem 0;
-    
-    text-align: center;
-    min-width: 10rem;
-    max-width: 10rem;
+    padding: 0 3rem;
 }
 #wrapper > nav > .logo-frame > ul > li > a {
-    all: unset;
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 200;
+    opacity: 0.8;
     cursor: pointer;
-    text-align: center;
-    color: #000000;
-    opacity: 0;
     transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-}
-#wrapper > nav > .logo-frame:hover > ul > li > a, #wrapper > nav > .logo-frame.on > ul > li > a {
-    opacity: 1;
 }
 #wrapper > nav > .logo-frame > ul > li > a:hover {
-    color: #00966B;
+    opacity: 1;
 }
-#wrapper > nav > .blur-frame {
-    height: 3.3rem;
-    background: rgb(255,255,255);
-    background: -moz-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 100%);
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff90",GradientType=1);
-}
-#wrapper > nav > .logo-frame > ul > li > a.active {
-    color: #00966B;
-}
-#wrapper > div.menu-btn {
-    display: none;
-}
+
 /*
     Main
 */
@@ -178,20 +141,20 @@
     Phone
 */
 @media (max-width: 767px) {
-    #wrapper > nav > .logo-frame > .logo {
-        width: 3.2rem;
-        height: 3.2rem;
-        margin-top: 1rem;
-    }
-    #wrapper > nav > .logo-frame > .logo > i {
-        font-size: 2.0rem;
-    }
-    #wrapper > nav > .logo-frame > ul {
-        margin-top: 1rem;
+    #wrapper > nav > .logo-frame {
         flex-direction: column;
     }
+    #wrapper > nav > .logo-frame > .logo {
+        height: 2rem;
+    }
+    #wrapper > nav > .logo-frame > .logo > i {
+        font-size: 2rem;
+    }
     #wrapper > nav > .logo-frame > ul {
+        flex-direction: column;
         height: 0px;
+        overflow: hidden;
+        padding-left: 0;
     }
     #wrapper > nav > .logo-frame:hover > ul {
         height: 0;
@@ -199,17 +162,25 @@
     #wrapper > nav > .logo-frame.on > ul {
         height: auto;
     }
+    #wrapper > nav > .logo-frame > ul > li {
+        padding: 0.7rem 0;
+    }
     #wrapper > nav > .logo-frame > ul > li > a {
-        font-size: 1.5rem;
-        font-weight: 700;
+        padding: 0.7rem;
+        font-size: 1.4rem;
+        font-weight: 500;
     }
     #wrapper > div.menu-btn {
         display: block;
-        position: fixed;
-        top: 1.5rem;
-        right: 0.5rem;
-        padding: 1rem;
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        padding: 0.8rem 1.5rem;
+        opacity: 0.8;
         z-index: 999;
+    }
+    #wrapper > div.menu-btn > i {
+        color: #fff;
     }
     #wrapper > footer {
         padding: 3rem 2rem 2rem 2rem;

@@ -32,6 +32,21 @@ code {
 li, ul, ol {
   list-style: none;
 }
+:root {
+  --base-background : #f0f2f5;
+  --base-red : #dd1818;
+  --base-red-1 : #ff4c4c;
+  --base-color: #00966B;
+  --font-en: 'Montserrat';
+
+  /*  GRAY  */
+  --system-gray-1 : #cccccc60;
+  --system-gray-2 : #cccccc70;
+  --system-gray-3 : #cccccc80;
+
+  /* Link */
+  --system-link-1 : #06c;
+}
 a {all: unset;}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

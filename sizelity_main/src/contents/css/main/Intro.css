@@ -230,9 +230,6 @@ main.intro > .price-wrapper > .price {
     justify-content: center;
     align-items: center;
 }
-main.intro > .price-wrapper > .price.before > p{
-    text-decoration: line-through;
-}
 main.intro > .price-wrapper > .price p {
     margin: 0 1rem 0 0.5rem;
     font-size: 2.0rem;
