@@ -1,5 +1,5 @@
 #wrapper > main.preview {
-    padding-top: 10rem;
+    padding-top: 8rem;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -22,10 +22,26 @@
     font-size: 4.3rem;
     font-weight: 700;
 }
+#wrapper > main.preview > section.main > div.main-title > div > h1 > strong {
+    color: var(--base-color);
+}
 #wrapper > main.preview > section.main > div.main-title > p {
     font-size: 1.3rem;
     color: #555555;
     font-weight: 400;
+}
+#wrapper > main.preview > section.main > div.main-title > a {
+    cursor: pointer;
+    color: #06c;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wrapper > main.preview > section.main > div.main-title > a:hover > p {
+    text-decoration: underline;
 }
 #wrapper > main.preview > section.main > .image-frame {
     width: 100vw;
@@ -38,16 +54,77 @@
     margin-top: 6rem;
     width: 40rem;
 }
+/*
+    Reservation Card
+*/
 
+section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    padding-bottom: 8rem;
+}
+.card > .main-title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+}
+.card > .main-title > h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.card > .main-title > h1 > strong {
+    color: #00966B;
+}
+section.card > a {
+    cursor: pointer;
+    color: #06c;
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+section.card > a:hover > p {
+    text-decoration: underline;
+}
+section.card > ul {
+    margin-top: 2rem;
+}
+section.card > ul > li {
+    margin-bottom: 1rem;
+}
+section.card .title-frame > h2 {
+    font-size: 1.6rem;
+}
+section.card .text-frame > p {
+    font-size: 1.1rem;
+}
 @media (max-width: 767px) {
     #wrapper > main.preview {
         padding-top: 8rem;
     }
+    #wrapper > main.preview > section.main > div.main-title > div > h1 {
+        font-size: 3.7rem;
+    }
+
     #wrapper > main.preview > section.main > div.main-title > p {
         padding: 0 2rem;
     }
     #wrapper > main.preview > section.main > .image-frame > img {
         margin-top: 3rem;
         width: 90%;
+    }
+    .card > .main-title > h1 {
+        font-size: 3.0rem;
+    }
+    section.card > a {
+        font-size: 1.45rem;
     }
 }

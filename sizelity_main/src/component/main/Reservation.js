@@ -153,7 +153,7 @@ const Reservation = ({history}) => {
                 <div className="left">
                     <div className="main-title">
                         <h1>사이즈리티</h1>
-                        <h1>쇼팡몰 등록 진행중.</h1>
+                        <h1>쇼핑몰 등록 진행중.</h1>
                     </div>
                     <ul className="info-input">
                         <li>
@@ -224,10 +224,14 @@ const Reservation = ({history}) => {
                             </label>
                         </li>
                     </ul>
-                    <button onClick={() => event.send()}>사전등록</button>
+                    <button onClick={() => event.send()}>쇼핑몰 등록</button>
                     <h4 ref={errorFrame}>Error</h4>
                     <Link to="/intro" >
                         <p>사이즈리티 더 알아보기</p>
+                        <i className="material-icons">chevron_right</i>
+                    </Link>
+                    <Link to="/profit" >
+                        <p>수익 분배 정책 알아보기</p>
                         <i className="material-icons">chevron_right</i>
                     </Link>
                 </div>

@@ -2,53 +2,73 @@
     min-height: 100vh;
     height: 100vh;
 }
-#wrapper > nav {
+#wrapper > nav.top-nav {
     background-color: #333;
     width: 100%;
     position: absolute;
     z-index: 999;
     top: 0;
 }
-#wrapper > nav > .logo-frame {
+#wrapper > nav.top-nav > .logo-frame {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.7rem 0;
 }
-#wrapper > nav > .logo-frame > a {
+#wrapper > nav.top-nav > .logo-frame > a {
     height: 1.6rem;
     cursor: pointer;
 }
-#wrapper > nav > .logo-frame > a > i {
+#wrapper > nav.top-nav > .logo-frame > a > i {
     font-size: 1.6rem;
     color: #fff;
     opacity: 0.7;
     transition-duration: 0.3s;
 }
-#wrapper > nav > .logo-frame > a > i:hover {
+#wrapper > nav.top-nav > .logo-frame > a > i:hover {
     opacity: 1.0;
 }
-#wrapper > nav > .logo-frame > ul {
+#wrapper > nav.top-nav > .logo-frame > ul {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     padding-left: 2rem;
 }
-#wrapper > nav > .logo-frame > ul > li {
+#wrapper > nav.top-nav > .logo-frame > ul > li {
     padding: 0 3rem;
 }
-#wrapper > nav > .logo-frame > ul > li > a {
+#wrapper > nav.top-nav > .logo-frame > ul > li > a {
     font-size: 0.8rem;
     color: #fff;
+    white-space: nowrap;
     font-weight: 200;
     opacity: 0.8;
     cursor: pointer;
     transition-duration: 0.3s;
 }
-#wrapper > nav > .logo-frame > ul > li > a:hover {
+#wrapper > nav.top-nav > .logo-frame > ul > li > a:hover {
     opacity: 1;
 }
 
+
+#wrapper > nav.talk-nav {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 999;
+}
+#wrapper > nav.talk-nav > a > i {
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 2.3rem;
+    color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    background-color: var(--base-color);
+    cursor: pointer;
+}
 /*
     Main
 */
@@ -141,34 +161,38 @@
     Phone
 */
 @media (max-width: 767px) {
-    #wrapper > nav > .logo-frame {
+    
+    #wrapper > nav.top-nav > .logo-frame {
         flex-direction: column;
+        padding: 1rem 0;
     }
-    #wrapper > nav > .logo-frame > .logo {
+    #wrapper > nav.top-nav > .logo-frame > .logo {
         height: 2rem;
     }
-    #wrapper > nav > .logo-frame > .logo > i {
+    #wrapper > nav.top-nav > .logo-frame > .logo > i {
         font-size: 2rem;
     }
-    #wrapper > nav > .logo-frame > ul {
+    #wrapper > nav.top-nav > .logo-frame > ul {
         flex-direction: column;
         height: 0px;
         overflow: hidden;
         padding-left: 0;
     }
-    #wrapper > nav > .logo-frame:hover > ul {
+    #wrapper > nav.top-nav > .logo-frame:hover > ul {
         height: 0;
     }
-    #wrapper > nav > .logo-frame.on > ul {
+    #wrapper > nav.top-nav > .logo-frame.on > ul {
         height: auto;
+        margin-top: 1rem;
+
     }
-    #wrapper > nav > .logo-frame > ul > li {
+    #wrapper > nav.top-nav > .logo-frame > ul > li {
         padding: 0.7rem 0;
     }
-    #wrapper > nav > .logo-frame > ul > li > a {
+    #wrapper > nav.top-nav > .logo-frame > ul > li > a {
         padding: 0.7rem;
         font-size: 1.4rem;
-        font-weight: 500;
+        font-weight: 400;
     }
     #wrapper > div.menu-btn {
         display: block;
@@ -182,6 +206,10 @@
     #wrapper > div.menu-btn > i {
         color: #fff;
     }
+    #wrapper > nav.talk-nav {
+        bottom: 2rem;
+    }
+
     #wrapper > footer {
         padding: 3rem 2rem 2rem 2rem;
     }

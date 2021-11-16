@@ -6,13 +6,13 @@ import { NavLink, Link } from "react-router-dom";
 import Preview from '../component/main/Preview';
 import Reservation from '../component/main/Reservation';
 import ReservationSuccess from '../component/main/ReservationSuccess';
-import FAQ from '../component/main/FAQ';
 import Intro from '../component/main/Introduce';
 import Help from '../component/main/Help';
 import TermsRouter from "./TermsRouter";
 
 // CSS
 import '../contents/css/main/MainFormat.css';
+import Profit from "../component/main/Profit";
 
 const MainRouter = () => {
     const NavFrame = useRef(null);
@@ -27,7 +27,7 @@ const MainRouter = () => {
     });
     return (
         <div id="wrapper">
-            <nav>
+            <nav className="top-nav">
                 <div className="logo-frame" ref={NavFrame} onClick={() => NavFrame.current.classList.remove('on')}>
                     <Link to="/" className="logo">
                         <i className="material-icons">local_offer</i>
@@ -37,28 +37,33 @@ const MainRouter = () => {
                             <NavLink exact to="/intro">서비스 소개</NavLink>
                         </li>
                         <li>
+                            <NavLink exact to="/profit">수익 배분 정책</NavLink>
+                        </li>
+                        <li>
                             <NavLink exact to="/reservation">쇼핑몰 등록</NavLink>
                         </li>
                         <li>
-                            <NavLink exact to="/faq">자주 묻는 질문</NavLink>
-                        </li>
-                        <li>
-                            <NavLink exact to="/help">고객센터</NavLink>
+                            <NavLink exact to="/help">문의</NavLink>
                         </li>
                     </ul>
                 </div>
+            </nav>
+            <nav className="talk-nav">
+                <a href="http://pf.kakao.com/_xfvrYs/chat" rel="noreferrer" target="_blank" title="카카오톡 문의">
+                    <i className="material-icons">chat_bubble</i>
+                </a>
             </nav>
             <div className="menu-btn" onClick={() => NavFrame.current.classList.toggle('on')}>
                 <i className="material-icons">menu</i>
             </div>
             <Switch>
                 <Route exact path="/" component={Preview} />
+                <Route path="/intro" component={Intro} />
+                <Route exact path="/profit" component={Profit} />
                 <Route exact path="/reservation" component={Reservation} />
                 <Route exact path="/reservation/success" component={ReservationSuccess} />
-                <Route path="/help" component={Help} />
-                <Route path="/faq" component={FAQ} />
-                <Route path="/intro" component={Intro} />
                 <Route exact path="/terms/:cate" component={TermsRouter} />
+                <Route path="/help" component={Help} />
             </Switch>
             <footer>
                 <ul>
@@ -66,14 +71,14 @@ const MainRouter = () => {
                         <h3>서비스</h3>
                         <div>
                             <Link to="/intro">서비스 소개</Link>
-                            <Link to="/reservation">사전등록</Link>
+                            <Link to="/intro">수익 분배 정책</Link>
+                            <Link to="/reservation">쇼핑몰 등록</Link>
                         </div>
                     </li>
                     <li>
                         <h3>고객지원</h3>
                         <div>
                             <Link to="/help">고객센터</Link>
-                            <Link to="/faq">자주 묻는 질문</Link>
                         </div>
                     </li>
                 </ul>

@@ -6,8 +6,8 @@ export default (
         <Route path="/" />
         <Route path="/notice" />
         <Route path="/intro" />
+        <Route path="/profit" />
         <Route path="/reservation" />
         <Route path="/help" />
-        <Route path="/faq" />
     </Switch>
 )

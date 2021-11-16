@@ -1,0 +1,165 @@
+#profit {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15%;
+}
+#profit > header {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+#profit > header > h1 {
+    font-size: 4.0rem;
+    font-size: 700;
+}
+#profit > header > h1 > strong {
+    color: var(--base-color);
+}
+#profit > header > div {
+    margin-top: 0.5rem;
+}
+#profit > header > div > p {
+    margin-top: 0.2rem;
+    font-size: 1.15rem;
+}
+#profit > section {
+    min-height: 50vh;
+    padding-bottom: 3rem;
+}
+#profit > section > .title > h2 {
+    font-size: 2.2rem;
+}
+#profit > section > .anim-wrapper {
+    width: 100%;
+    margin-top: 1rem;
+    height: 20rem;
+}
+#profit > section > .price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#profit > section > .price > strong {
+    text-align: center;
+}
+#profit > section > .price > strong > p {
+    font-size: 1.3rem;
+}
+#profit > section > .price > strong > h3 {
+    color: var(--base-color);
+    font-size: 3.0rem;
+    font-weight: 600;
+}
+#profit > section > .price > .line {
+    border-left: 2px dashed var(--base-color);
+    margin-top: 2rem;
+    height: 17rem;
+}
+#profit > section.explain {
+    width: 100%;
+}
+#profit > section.explain > .title {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+#profit > section.explain > ul {
+    display: flex;
+    justify-content: center;
+}
+#profit > section.explain > ul > li {
+    width: 25%;
+    padding: 0 0.5rem;
+    text-align: center;
+    border-right: 2px solid #dbdbdb;
+}
+#profit > section.explain > ul > li:last-of-type {
+    border: none;
+}
+#profit > section.explain > ul > li > i {
+    font-size: 4.0rem;
+    color: var(--base-color);
+}
+#profit > section.explain > ul > li > h3 {
+    font-size: 1.3rem;
+    margin: 0.3rem 0;
+}
+#profit > section.explain > ul > li > p {
+    font-size: 0.95rem;
+}
+#profit > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    background-color: var(--system-gray-1);
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+}
+#profit > article > P {
+    font-size: 1.15rem;
+}
+#profit > article > h2 {
+    margin: 0.5rem;
+    font-size: 2.0rem;
+}
+#profit > article > a {
+    display: flex;
+    align-items: center;
+    color: #06c;
+    cursor: pointer;
+}
+#profit > article > a > p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#profit > article > a:hover > p {
+    text-decoration: underline;
+}
+@media (max-width: 767px) {
+    #profit {
+        margin: 0 3%;
+        
+    }
+    #profit > header {
+        padding-left: 0;
+        text-align: center;
+    }
+    #profit > header > h1 {
+        font-size: 3.6rem;
+    }
+    #profit > header > div > p {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+    #profit > section > .title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    #profit > section > .title > p {
+        font-size: 1.15rem;
+    }
+    #profit > section.explain > ul { 
+        flex-direction: column;
+        align-items: center;
+    }
+    #profit > section.explain > ul > li {
+        width: 90%;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-right: none;
+        border-bottom: 2px solid #dbdbdb;
+    }
+    #profit > section.explain > ul > li > i {
+        font-size: 5.0rem;
+    }
+    #profit > section.explain > ul > li > h3 {
+        font-size: 2.0rem;
+    }
+    #profit > section.explain > ul > li > p {
+        font-size: 1.1rem;
+    }
+}
+
