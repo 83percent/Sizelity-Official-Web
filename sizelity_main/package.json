@@ -26,6 +26,7 @@
     "include": [
       "/",
       "/intro",
+      "/profit",
       "/reservation"
     ],
     "preconnectThirdParty": true,
